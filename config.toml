@@ -2,6 +2,7 @@
 theme = "hugo-theme-learn"
 
 # For search functionality
+baseURL = "https://lykienhuy.github.io/workshop/"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
