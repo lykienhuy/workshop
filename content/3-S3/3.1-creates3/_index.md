@@ -11,7 +11,7 @@ pre : " <b> 3.1. </b> "
 - Select **General purpose buckets**
 - Select **Create bucket**
 
-{{< img src="/images/3.S3/S3-(1" alt="S3" >}}.png)
+{{< img src="/images/3.S3/S3-(1).png" alt="S3" >}}
 
 2. In the **Bucket type** section
 - Select **General purpose**
@@ -21,10 +21,10 @@ pre : " <b> 3.1. </b> "
 Since Bucket names are globally unique, if you use a name that already exists, you will see the message: **"Bucket with the same name already exists"**. Therefore, you need to add letters or numbers at the end to make your Bucket name comply with the policy.
 {{% /notice %}}
 
-{{< img src="/images/3.S3/S3-(2" alt="S3" >}}.png)
+{{< img src="/images/3.S3/S3-(2).png" alt="S3" >}}
 
 3. Select **Create bucket**
 
-{{< img src="/images/3.S3/S3-(3" alt="S3" >}}.png)
+{{< img src="/images/3.S3/S3-(3).png" alt="S3" >}}
 
-{{< img src="/images/3.S3/S3-(4" alt="S3" >}}.png)
+{{< img src="/images/3.S3/S3-(4).png" alt="S3" >}}

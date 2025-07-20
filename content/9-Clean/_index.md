@@ -14,7 +14,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Choose Actions
 - Select Terminate
 
-{{< img src="/images/9.clean/Clear-(1" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(1).png" alt="Clean" >}}
 
 #### Delete Security Group
 - Open the Amazon VPC Console
@@ -23,7 +23,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Click on Actions, select Delete security group
 - Click Delete to confirm
 
-{{< img src="/images/9.clean/Clear-(2" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(2).png" alt="Clean" >}}
 
 #### Delete S3 Bucket
 1. Empty S3 Bucket
@@ -37,9 +37,9 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter the S3 name and select Delete bucket
 
-{{< img src="/images/9.clean/Clear-(6" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(6).png" alt="Clean" >}}
 
-{{< img src="/images/9.clean/Clear-(7" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(7).png" alt="Clean" >}}
 
 #### Delete Threat list IP in GuardDuty
 - Access GuardDuty
@@ -47,7 +47,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select the Threat list created in this lab
 - Select Actions/Delete
 
-{{< img src="/images/9.clean/Clear-(8" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(8).png" alt="Clean" >}}
 
 #### Delete EventBridge Rule
 - Access EventBridge
@@ -56,7 +56,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Actions
 - Enter delete
 
-{{< img src="/images/9.clean/Clear-(9" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(9).png" alt="Clean" >}}
 
 #### Delete Lambda function
 - Access AWS Lambda
@@ -64,7 +64,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter confirm
 
-{{< img src="/images/9.clean/Clear-(10" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(10).png" alt="Clean" >}}
 
 #### Delete SNS Topic
 - Access Amazon SNS
@@ -73,4 +73,4 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter delete me
 
-{{< img src="/images/9.clean/Clear-(11" alt="Clean" >}}.png)
+{{< img src="/images/9.clean/Clear-(11).png" alt="Clean" >}}

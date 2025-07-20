@@ -8,23 +8,23 @@ pre : " <b> 5. </b> "
 #### Create Lambda function
 1. Select **Create a function**
 
-{{< img src="/images/5.lambdafunction/Lambda-(1" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(1).png" alt="Lambda" >}}
 
 2. In the **Create function** interface
 - Select **Author from scratch**
 - Set **Function name** to `Auto_Isolate_Lambda`
 - Select **Python 3.13** for **Runtime**
 
-{{< img src="/images/5.lambdafunction/Lambda-(2" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(2).png" alt="Lambda" >}}
 
 3. Select **Create function**
 
-{{< img src="/images/5.lambdafunction/Lambda-(3" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(3).png" alt="Lambda" >}}
 
 4. After creating the environment
 - Select **Code**
 
-{{< img src="/images/5.lambdafunction/Lambda-(4" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(4).png" alt="Lambda" >}}
 
 5. In the **Code Source** interface
 - Add this code (Remember to replace with your **Isolated-Security Group ID**)
@@ -79,27 +79,27 @@ def lambda_handler(event, context):
         }
 ```
 
-{{< img src="/images/5.lambdafunction/Lambda-(5" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(5).png" alt="Lambda" >}}
 
 6. Proceed to grant permissions for **Lambda**
 - Select **Configuration**
 - Select **Edit**
 
-{{< img src="/images/5.lambdafunction/Lambda-(6" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(6).png" alt="Lambda" >}}
 
 7. In the **Existing role** section
 - Select **Lambda_Role**
 - Select **Save**
 
-{{< img src="/images/5.lambdafunction/Lambda-(7" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(7).png" alt="Lambda" >}}
 
 8. Proceed to test Lambda
 - Select **Test**
 - Enter **test** for Event Name
 - Click **Save**
 
-{{< img src="/images/5.lambdafunction/Lambda-(8" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(8).png" alt="Lambda" >}}
 
 9. If the result appears as shown below, it's successful
 
-{{< img src="/images/5.lambdafunction/Lambda-(9" alt="Lambda" >}}.png)
+{{< img src="/images/5.lambdafunction/Lambda-(9).png" alt="Lambda" >}}

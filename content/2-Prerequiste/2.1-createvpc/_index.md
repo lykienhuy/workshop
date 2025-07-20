@@ -24,6 +24,7 @@ pre : " <b> 2.1 </b> "
 {{< img src="/images/2.prerequisite/Chuanbi-(2).png" alt="VPC" >}}
 
 3. Click **Create VPC**
+
 {{< img src="/images/2.prerequisite/Chuanbi-(3).png" alt="VPC" >}}
 
 {{< img src="/images/2.prerequisite/Chuanbi-(4).png" alt="VPC" >}}
