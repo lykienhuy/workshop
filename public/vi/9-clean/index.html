@@ -12,21 +12,21 @@
     <title>Dọn dẹp tài nguyên :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1752948008" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752948008" rel="stylesheet">
-    <link href="/css/hybrid.css?1752948008" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752948008" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752948008" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752948008" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752948008" rel="stylesheet">
-    <link href="/css/theme.css?1752948008" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752948008" rel="stylesheet">
+    <link href="/css/nucleus.css?1753027044" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753027044" rel="stylesheet">
+    <link href="/css/hybrid.css?1753027044" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753027044" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753027044" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753027044" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753027044" rel="stylesheet">
+    <link href="/css/theme.css?1753027044" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753027044" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1752948008" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753027044" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752948008"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753027044"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1752948008"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752948008"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753027044"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753027044"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1752948008"></script>
+<script type="text/javascript" src="/js/search.js?1753027044"></script>
 
     
   </div>
@@ -731,7 +731,7 @@
             
           
           
-            <a href='/vi/'>Automated Security Scanning System using GuardDuty and Lambda function</a> > Dọn dẹp tài nguyên
+            <a href='/vi/'>Hệ thống Quét Bảo mật Tự động sử dụng GuardDuty và Lambda function</a> > Dọn dẹp tài nguyên
           
         
           
@@ -777,86 +777,75 @@
 	<p>Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này</p>
 <h4 id="xóa-ec2-instance">Xóa EC2 Instance</h4>
 <ul>
-<li>Truy cập <strong>EC2 Management Console</strong></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Intances</strong></li>
-<li>Chọn tất cả <strong>EC2 Instance</strong> liên quan tới bài lab</li>
-<li>Chọn <strong>Actions</strong></li>
-<li>Chọn <strong>Terminate</strong></li>
+<li>Truy cập EC2 Management Console</li>
+<li>Trên thanh điều hướng bên trái, chọn Intances</li>
+<li>Chọn tất cả EC2 Instance liên quan tới bài lab</li>
+<li>Chọn Actions</li>
+<li>Chọn Terminate</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%281%29.png" alt="Clean"></p>
 <h4 id="xóa-security-group">Xóa Security Group</h4>
 <ul>
-<li>Mở <strong>Amazon VPC Console</strong></li>
-<li>Chọn <strong>Security Groups</strong> từ thanh điều hướng bên trái</li>
-<li>Chọn <strong>Security Group</strong> liên quan đến bài lab</li>
-<li>Nhấp vào <strong>Actions</strong>, chọn <strong>Delete security grolab</strong></li>
-<li>Nhấp vào <strong>Delete</strong> để xác nhận</li>
+<li>Mở Amazon VPC Console</li>
+<li>Chọn Security Groups từ thanh điều hướng bên trái</li>
+<li>Chọn Security Group liên quan đến bài lab</li>
+<li>Nhấp vào Actions, chọn Delete security group</li>
+<li>Nhấp vào Delete để xác nhận</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%282%29.png" alt="Clean"></p>
-<h4 id="xóa-vpc">Xóa VPC</h4>
-<ul>
-<li>Truy cập VPC Management Console</li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Your VPCs</strong></li>
-<li>Chọn <strong>VPC</strong> liên quan đến bài Lab</li>
-<li>Chọn <strong>Action</strong></li>
-<li>Chọn <strong>Delete VPC</strong></li>
-<li>Gõ <strong>delete</strong> vào ô trống</li>
-<li>Chọn <strong>Delete</strong></li>
-</ul>
-<p><img src="/images/9.clean/Clear-%283%29.png" alt="Clean"></p>
 <h4 id="xóa-s3-bucket">Xóa S3 Bucket</h4>
 <ol>
 <li>Empty S3 Bucket</li>
 </ol>
 <ul>
-<li>Truy cập <strong>AWS S3</strong></li>
+<li>Truy cập AWS S3</li>
 <li>Trong danh sách Bucket name, chọn bucket liên quan bài lab</li>
-<li>Chọn <strong>Empty</strong></li>
-<li>Trong trang <strong>Empty bucket</strong>, xác nhận và chọn <strong>Empty</strong></li>
+<li>Chọn Empty</li>
+<li>Trong trang Empty bucket, xác nhận và chọn Empty</li>
 </ul>
 <ol start="2">
 <li>Xóa S3 Bucket</li>
 </ol>
 <ul>
-<li>Truy cập vào <strong>AWS S3</strong></li>
-<li>Chọn <strong>S3 bucket</strong> liên quan bài lab.</li>
-<li>Chọn <strong>Delete</strong></li>
-<li>Điền tên <strong>S3</strong> và chọn <strong>Delete bucket</strong></li>
+<li>Truy cập vào AWS S3</li>
+<li>Chọn S3 bucket liên quan bài lab.</li>
+<li>Chọn Delete</li>
+<li>Điền tên S3 và chọn Delete bucket</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%286%29.png" alt="Clean"></p>
 <p><img src="/images/9.clean/Clear-%287%29.png" alt="Clean"></p>
 <h4 id="xóa-threat-list-ip-trong-guardduty">Xóa Threat list IP trong GuardDuty</h4>
 <ul>
-<li>Truy cập vào <strong>GuardDuty</strong></li>
-<li>Chọn <strong>Settings/Lists</strong></li>
-<li>Chọn <strong>Threat list</strong> đã tạo trong bài lab này</li>
-<li>Chọn <strong>Actions/Delete</strong>
-<img src="/images/9.clean/Clear-%288%29.png" alt="Clean"></li>
+<li>Truy cập vào GuardDuty</li>
+<li>Chọn Settings/Lists</li>
+<li>Chọn Threat list đã tạo trong bài lab này</li>
+<li>Chọn Actions/Delete</li>
 </ul>
+<p><img src="/images/9.clean/Clear-%288%29.png" alt="Clean"></p>
 <h4 id="xóa-rule-eventbridge">Xóa Rule EventBridge</h4>
 <ul>
-<li>Truy cập vào <strong>EventBridge</strong></li>
-<li>Chọn <strong>Rule</strong></li>
-<li>Chọn <strong>Rule</strong> đã tạo trong bài lab này</li>
-<li>Chọn <strong>Actions</strong></li>
-<li>Nhập <strong>delete</strong></li>
+<li>Truy cập vào EventBridge</li>
+<li>Chọn Rule</li>
+<li>Chọn Rule đã tạo trong bài lab này</li>
+<li>Chọn Actions</li>
+<li>Nhập delete</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%289%29.png" alt="Clean"></p>
 <h4 id="xóa-lambda-function">Xóa Lambda function</h4>
 <ul>
-<li>Truy cập vào <strong>AWS Lambda</strong></li>
-<li>Chọn các <strong>Function</strong> liên quan bài lab</li>
-<li>Chọn <strong>Delete</strong></li>
-<li>Nhập <strong>confirm</strong></li>
+<li>Truy cập vào AWS Lambda</li>
+<li>Chọn các Function liên quan bài lab</li>
+<li>Chọn Delete</li>
+<li>Nhập confirm</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%2810%29.png" alt="Clean"></p>
 <h4 id="xóa-sns-topic">Xóa SNS Topic</h4>
 <ul>
-<li>Truy cập vào <strong>Amazon SNS</strong></li>
-<li>Chọn <strong>Topics</strong></li>
-<li>Chọn <strong>Topics</strong> đã tạo trong bài lab</li>
-<li>Chọn <strong>Delete</strong></li>
-<li>Nhập <strong>delete me</strong></li>
+<li>Truy cập vào Amazon SNS</li>
+<li>Chọn Topics</li>
+<li>Chọn Topics đã tạo trong bài lab</li>
+<li>Chọn Delete</li>
+<li>Nhập delete me</li>
 </ul>
 <p><img src="/images/9.clean/Clear-%2811%29.png" alt="Clean"></p>
 
@@ -1214,19 +1203,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752948008"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752948008"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752948008"></script>
-    <script src="/js/jquery.sticky.js?1752948008"></script>
-    <script src="/js/featherlight.min.js?1752948008"></script>
-    <script src="/js/highlight.pack.js?1752948008"></script>
+    <script src="/js/clipboard.min.js?1753027044"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753027044"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753027044"></script>
+    <script src="/js/jquery.sticky.js?1753027044"></script>
+    <script src="/js/featherlight.min.js?1753027044"></script>
+    <script src="/js/highlight.pack.js?1753027044"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752948008"></script>
-    <script src="/js/learn.js?1752948008"></script>
-    <script src="/js/hugo-learn.js?1752948008"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753027044"></script>
+    <script src="/js/learn.js?1753027044"></script>
+    <script src="/js/hugo-learn.js?1753027044"></script>
 
-    <link href="/mermaid/mermaid.css?1752948008" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1752948008"></script>
+    <link href="/mermaid/mermaid.css?1753027044" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753027044"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

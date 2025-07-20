@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Automated Security Scanning System using GuardDuty and Lambda function :: AWS System Manager</title>
+    <title>Hệ thống Quét Bảo mật Tự động sử dụng GuardDuty và Lambda function :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1752948008" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752948008" rel="stylesheet">
-    <link href="/css/hybrid.css?1752948008" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752948008" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752948008" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752948008" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752948008" rel="stylesheet">
-    <link href="/css/theme.css?1752948008" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752948008" rel="stylesheet">
+    <link href="/css/nucleus.css?1753027044" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753027044" rel="stylesheet">
+    <link href="/css/hybrid.css?1753027044" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753027044" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753027044" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753027044" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753027044" rel="stylesheet">
+    <link href="/css/theme.css?1753027044" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753027044" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1752948008" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753027044" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752948008"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753027044"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1752948008"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752948008"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753027044"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753027044"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1752948008"></script>
+<script type="text/javascript" src="/js/search.js?1753027044"></script>
 
     
   </div>
@@ -722,33 +722,33 @@
 </span>
 
  
-<h1 id="hệ-thống-quét-bảo-mật-tự-động-bằng-guardduty-và-lambda-function">Hệ thống quét bảo mật tự động bằng GuardDuty và Lambda function</h1>
+<h1 id="hệ-thống-quét-bảo-mật-tự-động-sử-dụng-guardduty-và-lambda-function">Hệ thống Quét Bảo mật Tự động sử dụng GuardDuty và Lambda function</h1>
 <h3 id="tổng-quan">Tổng quan</h3>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon GuardDuty và Lambda function</p>
+<p>Trong bài thực hành này, bạn sẽ học các khái niệm cơ bản và thực hành với Amazon GuardDuty và Lambda function</p>
 <p><img src="/images/Guardduty.drawio.png" alt="ConnectPrivate"></p>
 <h4 id="amazon-guardduty">Amazon GuardDuty</h4>
-<p><strong>Amazon GuardDuty</strong> là một dịch vụ phát hiện mối đe dọa (threat detection) được quản lý hoàn toàn bởi AWS. Nó giúp bạn giám sát và bảo vệ tài nguyên AWS như tài khoản IAM, EC2, S3, Lambda&hellip; khỏi các hành vi độc hại hoặc trái phép.</p>
+<p><strong>Amazon GuardDuty</strong> là dịch vụ phát hiện mối đe dọa được quản lý hoàn toàn bởi AWS. Nó giúp bạn giám sát và bảo vệ các tài nguyên AWS như tài khoản IAM, EC2, S3, Lambda&hellip; khỏi các hành vi độc hại hoặc trái phép.</p>
 <h4 id="lambda-function">Lambda Function</h4>
-<p><strong>Lambda Function</strong> là một dịch vụ điện toán không máy chủ (serverless) giúp bạn chạy mã nguồn mà không cần quản lý máy chủ.</p>
+<p><strong>Lambda Function</strong> là dịch vụ điện toán không máy chủ giúp bạn chạy mã mà không cần quản lý máy chủ.</p>
 <h4 id="amazon-cloudwatch">Amazon CloudWatch</h4>
-<p><strong>Amazon CloudWatch</strong> là một dịch vụ giám sát (monitoring) và quan sát hệ thống (observability) trong AWS, cho phép bạn
-thu thập, theo dõi và phân tích log, metric và sự kiện từ các dịch vụ AWS và ứng dụng. Giúp kích hoạt Lambda, EC2 Auto Scaling, hoặc gửi thông báo qua SNS.</p>
+<p><strong>Amazon CloudWatch</strong> là dịch vụ giám sát và quan sát trong AWS, cho phép bạn
+thu thập, theo dõi và phân tích nhật ký, số liệu và sự kiện từ các dịch vụ và ứng dụng AWS. Nó giúp kích hoạt Lambda, EC2 Auto Scaling hoặc gửi thông báo qua SNS.</p>
 <h4 id="amazon-eventbridge">Amazon EventBridge</h4>
-<p><strong>Amazon EventBridge</strong> là một dịch vụ bus sự kiện (event bus) được quản lý hoàn toàn, giúp kết nối các dịch vụ AWS, ứng dụng SaaS, hoặc ứng dụng tùy chỉnh thông qua các sự kiện theo thời gian thực.</p>
+<p><strong>Amazon EventBridge</strong> là dịch vụ bus sự kiện được quản lý hoàn toàn giúp kết nối các dịch vụ AWS, ứng dụng SaaS hoặc ứng dụng tùy chỉnh thông qua các sự kiện thời gian thực.</p>
 <h4 id="amazon-s3-bucket">Amazon S3 Bucket</h4>
-<p><strong>Amazon S3</strong> là dịch vụ lưu trữ đối tượng (object storage) linh hoạt, bền vững và có thể mở rộng không giới hạn của AWS. Một S3 Bucket là nơi chứa các đối tượng như file, ảnh, video, dữ liệu backup, log hệ thống.</p>
+<p><strong>Amazon S3</strong> là dịch vụ lưu trữ đối tượng linh hoạt, bền vững và có khả năng mở rộng vô hạn của AWS. S3 Bucket là một container chứa các đối tượng như tệp, hình ảnh, video, dữ liệu sao lưu, nhật ký hệ thống.</p>
 <h4 id="amazon-sns">Amazon SNS</h4>
-<p><strong>Amazon SNS</strong> là một dịch vụ nhắn tin pub/sub (publish/subscribe) được quản lý hoàn toàn bởi AWS. Nó cho phép bạn gửi thông báo tự động từ các hệ thống, ứng dụng hoặc dịch vụ AWS đến nhiều người nhận  (subscriber).</p>
+<p><strong>Amazon SNS</strong> là dịch vụ nhắn tin pub/sub (xuất bản/đăng ký) được quản lý hoàn toàn bởi AWS. Nó cho phép bạn gửi thông báo tự động từ hệ thống, ứng dụng hoặc dịch vụ AWS đến nhiều người nhận (người đăng ký).</p>
 <h3 id="nội-dung">Nội dung</h3>
 <ol>
-<li><a href="/vi/1-introduce/">Giới thiệu</a></li>
-<li><a href="/vi/2-prerequiste/">Các bước chuẩn bị</a></li>
-<li><a href="/vi/3-s3/">Tạo S3 Bucket</a></li>
+<li><a href="/vi/1-introduce/">Giới thiệu</a></li>
+<li><a href="/vi/2-prerequiste/">Chuẩn bị</a></li>
+<li><a href="/vi/3-s3/">Tạo S3 Bucket</a></li>
 <li><a href="/vi/4-guardduty/">Kích hoạt GuardDuty</a></li>
 <li><a href="/vi/5-lambdafunction/">Lambda function</a></li>
 <li><a href="/vi/6-eventbridge/">EventBridge</a></li>
 <li><a href="/vi/7-sns/">SNS</a></li>
-<li><a href="/vi/8-test/">Kiểm tra kết quả</a></li>
+<li><a href="/vi/8-test/">Kiểm tra Kết quả</a></li>
 <li><a href="/vi/9-clean/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
@@ -1096,19 +1096,19 @@ thu thập, theo dõi và phân tích log, metric và sự kiện từ các dị
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752948008"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752948008"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752948008"></script>
-    <script src="/js/jquery.sticky.js?1752948008"></script>
-    <script src="/js/featherlight.min.js?1752948008"></script>
-    <script src="/js/highlight.pack.js?1752948008"></script>
+    <script src="/js/clipboard.min.js?1753027044"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753027044"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753027044"></script>
+    <script src="/js/jquery.sticky.js?1753027044"></script>
+    <script src="/js/featherlight.min.js?1753027044"></script>
+    <script src="/js/highlight.pack.js?1753027044"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752948008"></script>
-    <script src="/js/learn.js?1752948008"></script>
-    <script src="/js/hugo-learn.js?1752948008"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753027044"></script>
+    <script src="/js/learn.js?1753027044"></script>
+    <script src="/js/hugo-learn.js?1753027044"></script>
 
-    <link href="/mermaid/mermaid.css?1752948008" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1752948008"></script>
+    <link href="/mermaid/mermaid.css?1753027044" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753027044"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
