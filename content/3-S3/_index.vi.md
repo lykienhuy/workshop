@@ -11,7 +11,7 @@ Trong bước này, chúng ta sẽ tạo một S3 Bucket dùng để lưu trữ
 GuardDuty sẽ dựa theo file mà ta đã upload lên để lọc.
 {{% /notice %}}
 
-![S3](/images/S3.png)
+{{< img src="/images/S3.png" alt="S3" >}}
 ### Nội dung
 - [Tạo S3 Bucket](3.1-creates3/) 
 - [Tải Threat list lên S3](3.2-uploadthreatlist/)

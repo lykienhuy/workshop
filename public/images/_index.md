@@ -10,7 +10,7 @@ chapter : false
 
  In this lab, you will learn the basic concepts and practice with Amazon GuardDuty and Lambda function
 
-{{< img src="/images/Guardduty.drawio.png" alt="ConnectPrivate" >}} 
+![ConnectPrivate](/images/Guardduty.drawio.png) 
 #### Amazon GuardDuty
 **Amazon GuardDuty** is a fully managed threat detection service by AWS. It helps you monitor and protect AWS resources such as IAM accounts, EC2, S3, Lambda... from malicious or unauthorized behaviors.
 

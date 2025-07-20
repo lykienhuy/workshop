@@ -10,7 +10,7 @@ chapter : false
 
  Trong bài thực hành này, bạn sẽ học các khái niệm cơ bản và thực hành với Amazon GuardDuty và Lambda function
 
-![ConnectPrivate](/images/Guardduty.drawio.png) 
+{{< img src="/images/Guardduty.drawio.png" alt="ConnectPrivate" >}} 
 
 #### Amazon GuardDuty
 **Amazon GuardDuty** là dịch vụ phát hiện mối đe dọa được quản lý hoàn toàn bởi AWS. Nó giúp bạn giám sát và bảo vệ các tài nguyên AWS như tài khoản IAM, EC2, S3, Lambda... khỏi các hành vi độc hại hoặc trái phép.

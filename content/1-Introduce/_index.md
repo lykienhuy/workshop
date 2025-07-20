@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 pre : " <b> 1. </b> "
 ---
-![Introduce](/images/Guardduty2.drawio.png) 
+{{< img src="/images/Guardduty2.drawio.png" alt="Introduce" >}} 
 #### Workflow
 
 ***1: Malicious Traffic from Compromised EC2 to Malicious EC2***

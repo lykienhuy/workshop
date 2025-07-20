@@ -23,42 +23,42 @@ In practice, IAM settings always apply the Least Privilege principle (only grant
 - Select **Roles**
 - Select **Create role**
 
-![EC2](/images/2.prerequisite/Chuanbi-(18).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(18" alt="EC2" >}}.png)
 
 2. In the **Trusted entity type** interface
 - Select **AWS service**
 - Select **Lambda**
 - Select **Next**
 
-![EC2](/images/2.prerequisite/Chuanbi-(19).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(19" alt="EC2" >}}.png)
 
 3. In the **Add permissions** interface
 - Search for **AmazonEC2FullAccess**
 - Select **AmazonEC2FullAccess**
 
-![EC2](/images/2.prerequisite/Chuanbi-(21).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(21" alt="EC2" >}}.png)
 
 - Search for **AWSLambda_FullAccess**
 - Select **AWSLambda_FullAccess**
 
-![EC2](/images/2.prerequisite/Chuanbi-(20).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(20" alt="EC2" >}}.png)
 
 - Search for **AWSLambdaBasicExecutionRole**
 - Select **AWSLambdaBasicExecutionRole**
 
-![EC2](/images/2.prerequisite/Chuanbi-(22).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(22" alt="EC2" >}}.png)
 
 - Search for **CloudWatchEventsFullAccess**
 - Select **CloudWatchEventsFullAccess**
 
-![EC2](/images/2.prerequisite/Chuanbi-(23).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(23" alt="EC2" >}}.png)
 
 4. In the **Name, review, create** section
 - Set **Role name** to `Lambda_Role`
 - Set **Description** to `Allows Lambda functions to call AWS services on your behalf`
 
-![EC2](/images/2.prerequisite/Chuanbi-(24).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(24" alt="EC2" >}}.png)
 
 5. Select **Create role**
 
-![EC2](/images/2.prerequisite/Chuanbi-(25).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(25" alt="EC2" >}}.png)

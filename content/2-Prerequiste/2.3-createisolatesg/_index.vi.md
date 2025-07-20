@@ -13,9 +13,9 @@ pre : " <b> 2.3 </b> "
 - **Description**, nhập `Isolated Security Group` (Đây sẽ là SG dùng để cách ly các EC2 bị nghi nhiễm)
 - **VPC** sẽ chọn VPC đã tạo
 
-![SG](/images/2.prerequisite/Chuanbi-(12).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(12" alt="SG" >}}.png)
 2. Cấu hình **Inbound Rules**
 - **SSH** cổng 22 dùng để kết nối với máy local và source chọn My IP (Dùng để điều tra các EC2 bị nghi nhiễm)
 - Chọn **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(13).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(13" alt="SG" >}}.png)

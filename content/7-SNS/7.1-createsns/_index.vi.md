@@ -11,34 +11,34 @@ pre : " <b> 7.1 </b> "
 - Chọn **Topics**
 - Chọn **Create topic**
 
-![SNS](/images/7.sns/SNS-(1).png)
+{{< img src="/images/7.sns/SNS-(1" alt="SNS" >}}.png)
 
 2. Trong giao diện **Create topic**
 - **Type** chọn là **Standard**
 - **Name** đặt là `Lambda_SNS`
 - **Display name** đặt là `SNS Topic`
 
-![SNS](/images/7.sns/SNS-(2).png)
+{{< img src="/images/7.sns/SNS-(2" alt="SNS" >}}.png)
 
 3. Bấm **Create topic**
 
-![SNS](/images/7.sns/SNS-(3).png)
+{{< img src="/images/7.sns/SNS-(3" alt="SNS" >}}.png)
 
 4. Sau khi tạo xong thì bấm **Create subscription**
 
-![SNS](/images/7.sns/SNS-(4).png)
+{{< img src="/images/7.sns/SNS-(4" alt="SNS" >}}.png)
 
 5. Tạo **Subscription** 
 - **Topic ARN** thì ta sẽ chọn ARN của **Lambda_SNS** 
 - **Protocol** thì ta chọn là **email** (Gửi qua email)
 - **Endpoint** ta sẽ nhập email nhận thông báo vào (Có thể là email của mình)
 
-![SNS](/images/7.sns/SNS-(5).png)
+{{< img src="/images/7.sns/SNS-(5" alt="SNS" >}}.png)
 
 6. Chọn **Create subscription**
 
-![SNS](/images/7.sns/SNS-(6).png)
+{{< img src="/images/7.sns/SNS-(6" alt="SNS" >}}.png)
 
 7. Check **Email** để **confirm subscription**
-![SNS](/images/7.sns/SNS-(7).png)
-![SNS](/images/7.sns/SNS-(8).png)
+{{< img src="/images/7.sns/SNS-(7" alt="SNS" >}}.png)
+{{< img src="/images/7.sns/SNS-(8" alt="SNS" >}}.png)

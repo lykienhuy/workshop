@@ -14,7 +14,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Choose Actions
 - Select Terminate
 
-![Clean](/images/9.clean/Clear-(1).png)
+{{< img src="/images/9.clean/Clear-(1" alt="Clean" >}}.png)
 
 #### Delete Security Group
 - Open the Amazon VPC Console
@@ -23,7 +23,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Click on Actions, select Delete security group
 - Click Delete to confirm
 
-![Clean](/images/9.clean/Clear-(2).png)
+{{< img src="/images/9.clean/Clear-(2" alt="Clean" >}}.png)
 
 #### Delete S3 Bucket
 1. Empty S3 Bucket
@@ -37,9 +37,9 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter the S3 name and select Delete bucket
 
-![Clean](/images/9.clean/Clear-(6).png)
+{{< img src="/images/9.clean/Clear-(6" alt="Clean" >}}.png)
 
-![Clean](/images/9.clean/Clear-(7).png)
+{{< img src="/images/9.clean/Clear-(7" alt="Clean" >}}.png)
 
 #### Delete Threat list IP in GuardDuty
 - Access GuardDuty
@@ -47,7 +47,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select the Threat list created in this lab
 - Select Actions/Delete
 
-![Clean](/images/9.clean/Clear-(8).png)
+{{< img src="/images/9.clean/Clear-(8" alt="Clean" >}}.png)
 
 #### Delete EventBridge Rule
 - Access EventBridge
@@ -56,7 +56,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Actions
 - Enter delete
 
-![Clean](/images/9.clean/Clear-(9).png)
+{{< img src="/images/9.clean/Clear-(9" alt="Clean" >}}.png)
 
 #### Delete Lambda function
 - Access AWS Lambda
@@ -64,7 +64,7 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter confirm
 
-![Clean](/images/9.clean/Clear-(10).png)
+{{< img src="/images/9.clean/Clear-(10" alt="Clean" >}}.png)
 
 #### Delete SNS Topic
 - Access Amazon SNS
@@ -73,4 +73,4 @@ We will proceed with the following steps to delete the resources we created in t
 - Select Delete
 - Enter delete me
 
-![Clean](/images/9.clean/Clear-(11).png)
+{{< img src="/images/9.clean/Clear-(11" alt="Clean" >}}.png)

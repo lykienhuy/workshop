@@ -11,28 +11,28 @@ pre : " <b> 7.2 </b> "
 - Vào lại môi trường Lambda lúc nãy đã tạo
 - Chọn **Add trigger**
 
-![Combine](/images/7.sns/Combine-(1).png)
+{{< img src="/images/7.sns/Combine-(1" alt="Combine" >}}.png)
 
 2. Trong giao diện **Add trigger**
 - **Trigger configuration** chọn là **EventBridge**
 - **Rule** chọn là **Existing rule**
 
-![Combine](/images/7.sns/Combine-(2).png)
+{{< img src="/images/7.sns/Combine-(2" alt="Combine" >}}.png)
 
 3. Bấm **Add** để tiến hành thêm trigger
 
-![Combine](/images/7.sns/Combine-(3).png)
+{{< img src="/images/7.sns/Combine-(3" alt="Combine" >}}.png)
 
 4. Tiếp theo chọn **Add destination**
 
-![Combine](/images/7.sns/Combine-(4).png)
+{{< img src="/images/7.sns/Combine-(4" alt="Combine" >}}.png)
 
 5. Trong giao diện **Destination configuration** 
 - **Condition** thì chọn là **On success**
 - **Destination type** thì ta chọn là **SNS topic**
 - Chọn **Save**
-![Combine](/images/7.sns/Combine-(5).png)
+{{< img src="/images/7.sns/Combine-(5" alt="Combine" >}}.png)
 
 6. Kiểm tra lại môi trường **Lambda** 
 
-![Combine](/images/7.sns/Combine-(6).png)
+{{< img src="/images/7.sns/Combine-(6" alt="Combine" >}}.png)

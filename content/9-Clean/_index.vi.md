@@ -14,7 +14,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Actions
 - Chọn Terminate
 
-![Clean](/images/9.clean/Clear-(1).png)
+{{< img src="/images/9.clean/Clear-(1).png" alt="Clean" >}}
 
 #### Xóa Security Group
 - Mở Amazon VPC Console
@@ -23,7 +23,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Nhấp vào Actions, chọn Delete security group
 - Nhấp vào Delete để xác nhận
 
-![Clean](/images/9.clean/Clear-(2).png)
+{{< img src="/images/9.clean/Clear-(2).png" alt="Clean" >}}
 
 #### Xóa S3 Bucket
 1. Empty S3 Bucket
@@ -37,9 +37,9 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Delete
 - Điền tên S3 và chọn Delete bucket
 
-![Clean](/images/9.clean/Clear-(6).png)
+{{< img src="/images/9.clean/Clear-(6).png" alt="Clean" >}}
 
-![Clean](/images/9.clean/Clear-(7).png)
+{{< img src="/images/9.clean/Clear-(7).png" alt="Clean" >}}
 
 #### Xóa Threat list IP trong GuardDuty
 - Truy cập vào GuardDuty
@@ -47,7 +47,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Threat list đã tạo trong bài lab này
 - Chọn Actions/Delete
 
-![Clean](/images/9.clean/Clear-(8).png)
+{{< img src="/images/9.clean/Clear-(8).png" alt="Clean" >}}
 
 #### Xóa Rule EventBridge
 - Truy cập vào EventBridge
@@ -56,7 +56,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Actions
 - Nhập delete
 
-![Clean](/images/9.clean/Clear-(9).png)
+{{< img src="/images/9.clean/Clear-(9).png" alt="Clean" >}}
 
 #### Xóa Lambda function
 - Truy cập vào AWS Lambda
@@ -64,7 +64,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Delete
 - Nhập confirm
 
-![Clean](/images/9.clean/Clear-(10).png)
+{{< img src="/images/9.clean/Clear-(10).png" alt="Clean" >}}
 
 #### Xóa SNS Topic
 - Truy cập vào Amazon SNS
@@ -73,4 +73,4 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 - Chọn Delete
 - Nhập delete me
 
-![Clean](/images/9.clean/Clear-(11).png)
+{{< img src="/images/9.clean/Clear-(11).png" alt="Clean" >}}

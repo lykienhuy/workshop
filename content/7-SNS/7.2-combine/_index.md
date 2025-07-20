@@ -11,28 +11,28 @@ pre : " <b> 7.2 </b> "
 - Return to the Lambda environment we created earlier
 - Select **Add trigger**
 
-![Combine](/images/7.sns/Combine-(1).png)
+{{< img src="/images/7.sns/Combine-(1" alt="Combine" >}}.png)
 
 2. In the **Add trigger** interface
 - Select **EventBridge** for **Trigger configuration**
 - Select **Existing rule** for **Rule**
 
-![Combine](/images/7.sns/Combine-(2).png)
+{{< img src="/images/7.sns/Combine-(2" alt="Combine" >}}.png)
 
 3. Click **Add** to add the trigger
 
-![Combine](/images/7.sns/Combine-(3).png)
+{{< img src="/images/7.sns/Combine-(3" alt="Combine" >}}.png)
 
 4. Next, select **Add destination**
 
-![Combine](/images/7.sns/Combine-(4).png)
+{{< img src="/images/7.sns/Combine-(4" alt="Combine" >}}.png)
 
 5. In the **Destination configuration** interface
 - Select **On success** for **Condition**
 - Select **SNS topic** for **Destination type**
 - Click **Save**
-![Combine](/images/7.sns/Combine-(5).png)
+{{< img src="/images/7.sns/Combine-(5" alt="Combine" >}}.png)
 
 6. Verify the **Lambda** environment
 
-![Combine](/images/7.sns/Combine-(6).png)
+{{< img src="/images/7.sns/Combine-(6" alt="Combine" >}}.png)

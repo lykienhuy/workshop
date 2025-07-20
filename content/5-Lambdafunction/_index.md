@@ -8,23 +8,23 @@ pre : " <b> 5. </b> "
 #### Create Lambda function
 1. Select **Create a function**
 
-![Lambda](/images/5.lambdafunction/Lambda-(1).png)
+{{< img src="/images/5.lambdafunction/Lambda-(1" alt="Lambda" >}}.png)
 
 2. In the **Create function** interface
 - Select **Author from scratch**
 - Set **Function name** to `Auto_Isolate_Lambda`
 - Select **Python 3.13** for **Runtime**
 
-![Lambda](/images/5.lambdafunction/Lambda-(2).png)
+{{< img src="/images/5.lambdafunction/Lambda-(2" alt="Lambda" >}}.png)
 
 3. Select **Create function**
 
-![Lambda](/images/5.lambdafunction/Lambda-(3).png)
+{{< img src="/images/5.lambdafunction/Lambda-(3" alt="Lambda" >}}.png)
 
 4. After creating the environment
 - Select **Code**
 
-![Lambda](/images/5.lambdafunction/Lambda-(4).png)
+{{< img src="/images/5.lambdafunction/Lambda-(4" alt="Lambda" >}}.png)
 
 5. In the **Code Source** interface
 - Add this code (Remember to replace with your **Isolated-Security Group ID**)
@@ -79,27 +79,27 @@ def lambda_handler(event, context):
         }
 ```
 
-![Lambda](/images/5.lambdafunction/Lambda-(5).png)
+{{< img src="/images/5.lambdafunction/Lambda-(5" alt="Lambda" >}}.png)
 
 6. Proceed to grant permissions for **Lambda**
 - Select **Configuration**
 - Select **Edit**
 
-![Lambda](/images/5.lambdafunction/Lambda-(6).png)
+{{< img src="/images/5.lambdafunction/Lambda-(6" alt="Lambda" >}}.png)
 
 7. In the **Existing role** section
 - Select **Lambda_Role**
 - Select **Save**
 
-![Lambda](/images/5.lambdafunction/Lambda-(7).png)
+{{< img src="/images/5.lambdafunction/Lambda-(7" alt="Lambda" >}}.png)
 
 8. Proceed to test Lambda
 - Select **Test**
 - Enter **test** for Event Name
 - Click **Save**
 
-![Lambda](/images/5.lambdafunction/Lambda-(8).png)
+{{< img src="/images/5.lambdafunction/Lambda-(8" alt="Lambda" >}}.png)
 
 9. If the result appears as shown below, it's successful
 
-![Lambda](/images/5.lambdafunction/Lambda-(9).png)
+{{< img src="/images/5.lambdafunction/Lambda-(9" alt="Lambda" >}}.png)

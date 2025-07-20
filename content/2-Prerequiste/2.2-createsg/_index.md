@@ -12,7 +12,7 @@ pre : " <b> 2.2 </b> "
 - Select **Security Group**
 - Select **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(8).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(8" alt="SG" >}}.png)
 
 2. Proceed with configuration
 - For **Security Group name**, enter `Security-Group`
@@ -20,7 +20,7 @@ pre : " <b> 2.2 </b> "
 - For **VPC** select the VPC you created
 - Click on **Add rule**
 
-![SG](/images/2.prerequisite/Chuanbi-(9).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(9" alt="SG" >}}.png)
 3. Configure **Inbound Rules**
 - **SSH** port 22 used to connect with local machine and select My IP for source
 
@@ -28,7 +28,7 @@ pre : " <b> 2.2 </b> "
 
 - **HTTPS** port 443 and source is Anywhere IPv4
 
-![SG](/images/2.prerequisite/Chuanbi-(10).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(10" alt="SG" >}}.png)
 4. Select **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(11).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(11" alt="SG" >}}.png)

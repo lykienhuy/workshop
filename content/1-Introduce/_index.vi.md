@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 pre : " <b> 1. </b> "
 ---
-![Introduce](/images/Guardduty2.drawio.png) 
+{{< img src="/images/Guardduty2.drawio.png" alt="Introduce" >}} 
 #### Luồng hoạt động
 
 ***1: Traffic độc hại từ Compromised EC2 đến Malicious EC2***

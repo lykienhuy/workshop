@@ -6,11 +6,16 @@ baseURL = "https://lykienhuy.github.io/workshop/"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+# Xóa cấu hình cache có thể gây vấn đề
+# [caches]
+#   [caches.images]
+#     dir = ':cacheDir/images'
 
+# Cấu hình params
 [params]
+  # Đảm bảo đường dẫn hình ảnh chính xác
+  relativeURLs = true
+  uglyURLs = false
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link

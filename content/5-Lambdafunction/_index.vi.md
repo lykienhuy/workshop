@@ -8,23 +8,23 @@ pre : " <b> 5. </b> "
 #### Tạo Lambda function
 1. Chọn **Create a function**
 
-![Lambda](/images/5.lambdafunction/Lambda-(1).png)
+{{< img src="/images/5.lambdafunction/Lambda-(1" alt="Lambda" >}}.png)
 
 2. Trong giao diện **Create function**
 - Chọn **Author froom scratch**
 - **Function name** đặt là `Auto_Isolate_Lambda`
 - **Runtime** chọn là **Python 3.13** 
 
-![Lambda](/images/5.lambdafunction/Lambda-(2).png)
+{{< img src="/images/5.lambdafunction/Lambda-(2" alt="Lambda" >}}.png)
 
 3. Chọn **Create function**
 
-![Lambda](/images/5.lambdafunction/Lambda-(3).png)
+{{< img src="/images/5.lambdafunction/Lambda-(3" alt="Lambda" >}}.png)
 
 4. Sau khi tạo môi trường xong
 - Chọn **Code**
 
-![Lambda](/images/5.lambdafunction/Lambda-(4).png)
+{{< img src="/images/5.lambdafunction/Lambda-(4" alt="Lambda" >}}.png)
 
 5. Trong giao diện **Code Source**
 - Thêm code này vào (Nhớ thay bằng **ID Isolated-Security Group**)
@@ -79,27 +79,27 @@ def lambda_handler(event, context):
         }
 ```
 
-![Lambda](/images/5.lambdafunction/Lambda-(5).png)
+{{< img src="/images/5.lambdafunction/Lambda-(5" alt="Lambda" >}}.png)
 
 6. Tiến hành cấp quyền cho **Lambda** 
 - Chọn **Configuration**
 - Chọn **Edit**
 
-![Lambda](/images/5.lambdafunction/Lambda-(6).png)
+{{< img src="/images/5.lambdafunction/Lambda-(6" alt="Lambda" >}}.png)
 
 7. Ở mục **Existing role**
 - Chọn **Lambda_Role**
 - Chọn **Save**
 
-![Lambda](/images/5.lambdafunction/Lambda-(7).png)
+{{< img src="/images/5.lambdafunction/Lambda-(7" alt="Lambda" >}}.png)
 
 8. Tiến hành test Lambda
 - Chọn **Test**
 - Điền Event Name là **test**
 - Bấm **Save**
 
-![Lambda](/images/5.lambdafunction/Lambda-(8).png)
+{{< img src="/images/5.lambdafunction/Lambda-(8" alt="Lambda" >}}.png)
 
 9. Nếu ra kết quả như hình dưới là thành công
 
-![Lambda](/images/5.lambdafunction/Lambda-(9).png)
+{{< img src="/images/5.lambdafunction/Lambda-(9" alt="Lambda" >}}.png)

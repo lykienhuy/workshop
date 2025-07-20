@@ -13,9 +13,9 @@ pre : " <b> 2.3 </b> "
 - For **Description**, enter `Isolated Security Group` (This will be the SG used to isolate suspected infected EC2 instances)
 - For **VPC** select the VPC you created
 
-![SG](/images/2.prerequisite/Chuanbi-(12).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(12" alt="SG" >}}.png)
 2. Configure **Inbound Rules**
 - **SSH** port 22 used to connect with local machine and select My IP for source (Used to investigate suspected infected EC2 instances)
 - Select **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(13).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(13" alt="SG" >}}.png)

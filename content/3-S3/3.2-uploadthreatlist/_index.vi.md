@@ -13,20 +13,20 @@ Ta sẽ giả sử **Malicious_EC2** là một EC2 độc hại, không được
 - Chọn **Malicious_EC2**
 - Copy **Public IPv4 address** của EC2 này
 
-![S3](/images/3.S3/S3-(6).png)
+{{< img src="/images/3.S3/S3-(6" alt="S3" >}}.png)
 
 2. Tạo 1 **file txt**
 - Đặt tên là `ThreatList.txt`
 - Paste IP của EC2 độc hại vào **file txt** đó
 
-![S3](/images/3.S3/S3-(7).png)
+{{< img src="/images/3.S3/S3-(7" alt="S3" >}}.png)
 
 3. Tiến hành Upload **file txt** đó lên **S3**
 
-![S3](/images/3.S3/S3-(8).png)
+{{< img src="/images/3.S3/S3-(8" alt="S3" >}}.png)
 
-![S3](/images/3.S3/S3-(9).png)
+{{< img src="/images/3.S3/S3-(9" alt="S3" >}}.png)
 
 4. Sau khi Upload thành công thì tiến hành Copy **Object URL**
 
-![S3](/images/3.S3/S3-(10).png)
+{{< img src="/images/3.S3/S3-(10" alt="S3" >}}.png)

@@ -11,43 +11,43 @@ pre : "<b>8. </b>"
 
 1. Ta sẽ kiểm tra xem 2 EC2 ta đã tạo có phải nằm trong **Security-Group** không ( không được nằm trong **Isolated-Security-Group**)
 
-![Test](/images/8.test/Test-(1).png)
+{{< img src="/images/8.test/Test-(1" alt="Test" >}}.png)
 
 2. Tiến hành kết nối SSH với **Compromised_EC2**
 
-![Test](/images/8.test/Test-(2).png)
+{{< img src="/images/8.test/Test-(2" alt="Test" >}}.png)
 
 3. Tiến hành Update
 ```
 sudo yum update -y
 ```
-![Test](/images/8.test/Test-(3).png)
+{{< img src="/images/8.test/Test-(3" alt="Test" >}}.png)
 
 4. Tiến hành **ping** vào IPv4 của **Malicious_EC2** đang nằm trong Threat list của **GuardDuty**
 
-![Test](/images/8.test/Test-(4).png)
+{{< img src="/images/8.test/Test-(4" alt="Test" >}}.png)
 
 5. Nếu hiện thông báo này thì chứng tỏ **Lambda** đã hoạt động
-![Test](/images/8.test/Test-(5).png)
+{{< img src="/images/8.test/Test-(5" alt="Test" >}}.png)
 
 6. Tiến hành kiểm tra **EC2**
 - Xem EC2 đã tắt chưa
 - Đã cách ly sang **Isolated-Security-Group** chưa
 
-![Test](/images/8.test/Test-(6).png)
+{{< img src="/images/8.test/Test-(6" alt="Test" >}}.png)
 
-![Test](/images/8.test/Test-(7).png)
+{{< img src="/images/8.test/Test-(7" alt="Test" >}}.png)
 
 7. Kiểm tra **Finding** từ **GuardDuty**
 - Chọn **Findings**
 - Ta sẽ thấy có dòng thông báo là "**EC2 đang kết nối với một IP nằm trong Threat list**""
 - Mức độ Severity là **Medium**
 
-![Test](/images/8.test/Test-(8).png)
+{{< img src="/images/8.test/Test-(8" alt="Test" >}}.png)
 
 8. Bấm vào **Finding** vừa phát hiện để xem chi tiết
-![Test](/images/8.test/Test-(9).png)
+{{< img src="/images/8.test/Test-(9" alt="Test" >}}.png)
 
 9. Kiểm tra Email để xem thông báo
 
-![Test](/images/8.test/Test-(10).png)
+{{< img src="/images/8.test/Test-(10" alt="Test" >}}.png)

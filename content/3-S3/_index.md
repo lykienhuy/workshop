@@ -11,7 +11,7 @@ In this step, we will create an S3 Bucket used to store IPs of malicious EC2 ins
 GuardDuty will filter based on the file we have uploaded.
 {{% /notice %}}
 
-![S3](/images/S3.png)
+{{< img src="/images/S3.png" alt="S3" >}}
 ### Content
 - [Create S3 Bucket](3.1-creates3/) 
 - [Upload Threat list to S3](3.2-uploadthreatlist/)

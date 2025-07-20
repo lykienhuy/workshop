@@ -12,7 +12,7 @@ pre : " <b> 2.2 </b> "
 - Chọn **Security Group**
 - Chọn **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(8).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(8" alt="SG" >}}.png)
 
 2. Tiến hành cấu hình
 - **Security Group name**, nhập `Security-Group`
@@ -20,7 +20,7 @@ pre : " <b> 2.2 </b> "
 - **VPC** sẽ chọn VPC đã tạo
 - Bấm vào **Add rule**
 
-![SG](/images/2.prerequisite/Chuanbi-(9).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(9" alt="SG" >}}.png)
 3. Cấu hình **Inbound Rules**
 - **SSH** cổng 22 dùng để kết nối với máy local và source chọn My IP
 
@@ -28,7 +28,7 @@ pre : " <b> 2.2 </b> "
 
 - **HTTPS** cổng 443 và source là Anywhere IPv4
 
-![SG](/images/2.prerequisite/Chuanbi-(10).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(10" alt="SG" >}}.png)
 4. Chọn **Create Security Group**
 
-![SG](/images/2.prerequisite/Chuanbi-(11).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(11" alt="SG" >}}.png)

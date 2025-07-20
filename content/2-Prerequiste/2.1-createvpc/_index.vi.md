@@ -12,7 +12,7 @@ pre : " <b> 2.1 </b> "
 - Chọn **Your VPC**
 - Chọn **Create VPC**
 
-![VPC](/images/2.prerequisite/Chuanbi-(1).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(1).png" alt="VPC" >}}
 
 2. Tùy chọn trong **VPC Wizard**
 
@@ -21,12 +21,12 @@ pre : " <b> 2.1 </b> "
 - Số lượng **AZ**: 
 - Số lượng **private/public** subnet: 1
 
-![VPC](/images/2.prerequisite/Chuanbi-(2).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(2).png" alt="VPC" >}}
 
 3. Chọn **Create VPC**
 
-![VPC](/images/2.prerequisite/Chuanbi-(3).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(3).png" alt="VPC" >}}
 
-![VPC](/images/2.prerequisite/Chuanbi-(4).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(4).png" alt="VPC" >}}
 
-![VPC](/images/2.prerequisite/Chuanbi-(5).png)
+{{< img src="/images/2.prerequisite/Chuanbi-(5).png" alt="VPC" >}}
