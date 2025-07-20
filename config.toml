@@ -6,6 +6,10 @@ baseURL = "https://lykienhuy.github.io/workshop/"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
