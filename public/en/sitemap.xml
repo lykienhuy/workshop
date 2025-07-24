@@ -2,275 +2,275 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/workshop/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/"
+                href="http://localhost:1313/workshop/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="http://localhost:1313/workshop/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-s3/3.1-creates3/</loc>
+    <loc>http://localhost:1313/workshop/3-s3/3.1-creates3/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-s3/3.1-creates3/"
+                href="http://localhost:1313/workshop/vi/3-s3/3.1-creates3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-s3/3.1-creates3/"
+                href="http://localhost:1313/workshop/3-s3/3.1-creates3/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-sns/7.1-createsns/</loc>
+    <loc>http://localhost:1313/workshop/7-sns/7.1-createsns/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-sns/7.1-createsns/"
+                href="http://localhost:1313/workshop/vi/7-sns/7.1-createsns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-sns/7.1-createsns/"
+                href="http://localhost:1313/workshop/7-sns/7.1-createsns/"
                 />
   </url><url>
-    <loc>//localhost:1313/1-introduce/</loc>
+    <loc>http://localhost:1313/workshop/1-introduce/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-introduce/"
+                href="http://localhost:1313/workshop/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-introduce/"
+                href="http://localhost:1313/workshop/1-introduce/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.1-createvpc/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/2.1-createvpc/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.1-createvpc/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/2.1-createvpc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.1-createvpc/"
+                href="http://localhost:1313/workshop/2-prerequiste/2.1-createvpc/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-sns/7.2-combine/</loc>
+    <loc>http://localhost:1313/workshop/7-sns/7.2-combine/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-sns/7.2-combine/"
+                href="http://localhost:1313/workshop/vi/7-sns/7.2-combine/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-sns/7.2-combine/"
+                href="http://localhost:1313/workshop/7-sns/7.2-combine/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.2-createsg/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/2.2-createsg/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.2-createsg/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/2.2-createsg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.2-createsg/"
+                href="http://localhost:1313/workshop/2-prerequiste/2.2-createsg/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/"
+                href="http://localhost:1313/workshop/2-prerequiste/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-s3/3.2-uploadthreatlist/</loc>
+    <loc>http://localhost:1313/workshop/3-s3/3.2-uploadthreatlist/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-s3/3.2-uploadthreatlist/"
+                href="http://localhost:1313/workshop/vi/3-s3/3.2-uploadthreatlist/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-s3/3.2-uploadthreatlist/"
+                href="http://localhost:1313/workshop/3-s3/3.2-uploadthreatlist/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.3-createisolatesg/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/2.3-createisolatesg/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.3-createisolatesg/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/2.3-createisolatesg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.3-createisolatesg/"
+                href="http://localhost:1313/workshop/2-prerequiste/2.3-createisolatesg/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-s3/</loc>
+    <loc>http://localhost:1313/workshop/3-s3/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-s3/"
+                href="http://localhost:1313/workshop/vi/3-s3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-s3/"
+                href="http://localhost:1313/workshop/3-s3/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-guardduty/</loc>
+    <loc>http://localhost:1313/workshop/4-guardduty/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-guardduty/"
+                href="http://localhost:1313/workshop/vi/4-guardduty/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-guardduty/"
+                href="http://localhost:1313/workshop/4-guardduty/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.4-createec2/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/2.4-createec2/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.4-createec2/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/2.4-createec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.4-createec2/"
+                href="http://localhost:1313/workshop/2-prerequiste/2.4-createec2/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prerequiste/2.5-createiamrole/</loc>
+    <loc>http://localhost:1313/workshop/2-prerequiste/2.5-createiamrole/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.5-createiamrole/"
+                href="http://localhost:1313/workshop/vi/2-prerequiste/2.5-createiamrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.5-createiamrole/"
+                href="http://localhost:1313/workshop/2-prerequiste/2.5-createiamrole/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-lambdafunction/</loc>
+    <loc>http://localhost:1313/workshop/5-lambdafunction/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-lambdafunction/"
+                href="http://localhost:1313/workshop/vi/5-lambdafunction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-lambdafunction/"
+                href="http://localhost:1313/workshop/5-lambdafunction/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-eventbridge/</loc>
+    <loc>http://localhost:1313/workshop/6-eventbridge/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-eventbridge/"
+                href="http://localhost:1313/workshop/vi/6-eventbridge/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-eventbridge/"
+                href="http://localhost:1313/workshop/6-eventbridge/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-sns/</loc>
+    <loc>http://localhost:1313/workshop/7-sns/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-sns/"
+                href="http://localhost:1313/workshop/vi/7-sns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-sns/"
+                href="http://localhost:1313/workshop/7-sns/"
                 />
   </url><url>
-    <loc>//localhost:1313/8-test/</loc>
+    <loc>http://localhost:1313/workshop/8-test/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/8-test/"
+                href="http://localhost:1313/workshop/vi/8-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/8-test/"
+                href="http://localhost:1313/workshop/8-test/"
                 />
   </url><url>
-    <loc>//localhost:1313/9-clean/</loc>
+    <loc>http://localhost:1313/workshop/9-clean/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/9-clean/"
+                href="http://localhost:1313/workshop/vi/9-clean/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/9-clean/"
+                href="http://localhost:1313/workshop/9-clean/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/workshop/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/categories/"
+                href="http://localhost:1313/workshop/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="http://localhost:1313/workshop/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/workshop/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/tags/"
+                href="http://localhost:1313/workshop/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="http://localhost:1313/workshop/tags/"
                 />
   </url>
 </urlset>

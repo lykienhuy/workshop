@@ -28,7 +28,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "AWS System Manager"
+title = "Automated Security Scanning System using GuardDuty and Lambda function"
 weight = 1
 languageName = "English"
 
@@ -39,7 +39,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "AWS System Manager"
+title = "Automated Security Scanning System using GuardDuty and Lambda function"
 weight = 2
 languageName = "Tiếng Việt"
 

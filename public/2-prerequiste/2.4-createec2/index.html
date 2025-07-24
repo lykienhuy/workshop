@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/workshop/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=workshop/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
     <meta name="description" content="">
 <meta name="author" content="huyly520@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/workshop/images/favicon.png" type="image/png">
 
-    <title>Create EC2 Instance :: AWS System Manager</title>
+    <title>Create EC2 Instance :: Automated Security Scanning System using GuardDuty and Lambda function</title>
 
     
-    <link href="/css/nucleus.css?1753026332" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753026332" rel="stylesheet">
-    <link href="/css/hybrid.css?1753026332" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753026332" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753026332" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753026332" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753026332" rel="stylesheet">
-    <link href="/css/theme.css?1753026332" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753026332" rel="stylesheet">
+    <link href="/workshop/css/nucleus.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/fontawesome-all.min.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/hybrid.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/featherlight.min.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/perfect-scrollbar.min.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/auto-complete.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/atom-one-dark-reasonable.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/theme.css?1753325853" rel="stylesheet">
+    <link href="/workshop/css/hugo-theme.css?1753325853" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753026332" rel="stylesheet">
+    <link href="/workshop/css/theme-workshop.css?1753325853" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753026332"></script>
+    <script src="/workshop/js/jquery-3.3.1.min.js?1753325853"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/2-prerequiste/2.4-createec2/">
+  <body class="" data-url="/workshop/2-prerequiste/2.4-createec2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1753026332"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753026332"></script>
+<script type="text/javascript" src="/workshop/js/lunr.min.js?1753325853"></script>
+<script type="text/javascript" src="/workshop/js/auto-complete.js?1753325853"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "http:\/\/localhost:1313\/workshop\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1753026332"></script>
+<script type="text/javascript" src="/workshop/js/search.js?1753325853"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/workshop/1-introduce/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/1-introduce/">
+      <a href="/workshop/1-introduce/">
            <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
@@ -108,12 +108,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/" title="Preparation" class="dd-item 
         parent
         
         
         ">
-      <a href="/2-prerequiste/">
+      <a href="/workshop/2-prerequiste/">
            <b> 2.</b> Preparation
           
             <i class="fas fa-check read-icon"></i>
@@ -139,12 +139,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createvpc/" title="Preparing VPC" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/2.1-createvpc/" title="Preparing VPC" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createvpc/">
+      <a href="/workshop/2-prerequiste/2.1-createvpc/">
            <b> 2.1 </b> Preparing VPC
           
             <i class="fas fa-check read-icon"></i>
@@ -167,12 +167,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createsg/" title="Create Security Group" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/2.2-createsg/" title="Create Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.2-createsg/">
+      <a href="/workshop/2-prerequiste/2.2-createsg/">
            <b> 2.2 </b> Create Security Group
           
             <i class="fas fa-check read-icon"></i>
@@ -195,12 +195,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-createisolatesg/" title="Create Isolate Security Group" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/2.3-createisolatesg/" title="Create Isolate Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.3-createisolatesg/">
+      <a href="/workshop/2-prerequiste/2.3-createisolatesg/">
            <b> 2.3 </b> Create Isolate Security Group
           
             <i class="fas fa-check read-icon"></i>
@@ -223,12 +223,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-createec2/" title="Create EC2 Instance" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/2.4-createec2/" title="Create EC2 Instance" class="dd-item 
         
         active
         
         ">
-      <a href="/2-prerequiste/2.4-createec2/">
+      <a href="/workshop/2-prerequiste/2.4-createec2/">
            <b> 2.4 </b> Create EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
@@ -251,12 +251,12 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.5-createiamrole/" title="Create Role for Lambda" class="dd-item 
+    <li data-nav-id="/workshop/2-prerequiste/2.5-createiamrole/" title="Create Role for Lambda" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.5-createiamrole/">
+      <a href="/workshop/2-prerequiste/2.5-createiamrole/">
            <b> 2.5 </b> Create Role for Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -286,12 +286,12 @@
  
   
     
-    <li data-nav-id="/3-s3/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/workshop/3-s3/" title="Create S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/3-s3/">
+      <a href="/workshop/3-s3/">
            <b> 3. </b> Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
@@ -317,12 +317,12 @@
  
   
     
-    <li data-nav-id="/3-s3/3.1-creates3/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/workshop/3-s3/3.1-creates3/" title="Create S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/3-s3/3.1-creates3/">
+      <a href="/workshop/3-s3/3.1-creates3/">
            <b> 3.1. </b> Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
@@ -345,12 +345,12 @@
  
   
     
-    <li data-nav-id="/3-s3/3.2-uploadthreatlist/" title="Upload Threat list to S3" class="dd-item 
+    <li data-nav-id="/workshop/3-s3/3.2-uploadthreatlist/" title="Upload Threat list to S3" class="dd-item 
         
         
         
         ">
-      <a href="/3-s3/3.2-uploadthreatlist/">
+      <a href="/workshop/3-s3/3.2-uploadthreatlist/">
            <b> 3.2. </b> Upload Threat list to S3
           
             <i class="fas fa-check read-icon"></i>
@@ -380,12 +380,12 @@
  
   
     
-    <li data-nav-id="/4-guardduty/" title="Activate GuardDuty" class="dd-item 
+    <li data-nav-id="/workshop/4-guardduty/" title="Activate GuardDuty" class="dd-item 
         
         
         
         ">
-      <a href="/4-guardduty/">
+      <a href="/workshop/4-guardduty/">
            <b> 4. </b> Activate GuardDuty
           
             <i class="fas fa-check read-icon"></i>
@@ -406,12 +406,12 @@
  
   
     
-    <li data-nav-id="/5-lambdafunction/" title="Lambda function" class="dd-item 
+    <li data-nav-id="/workshop/5-lambdafunction/" title="Lambda function" class="dd-item 
         
         
         
         ">
-      <a href="/5-lambdafunction/">
+      <a href="/workshop/5-lambdafunction/">
            <b> 5. </b> Lambda function
           
             <i class="fas fa-check read-icon"></i>
@@ -432,12 +432,12 @@
  
   
     
-    <li data-nav-id="/6-eventbridge/" title="EventBridge" class="dd-item 
+    <li data-nav-id="/workshop/6-eventbridge/" title="EventBridge" class="dd-item 
         
         
         
         ">
-      <a href="/6-eventbridge/">
+      <a href="/workshop/6-eventbridge/">
            <b> 6. </b> EventBridge
           
             <i class="fas fa-check read-icon"></i>
@@ -458,12 +458,12 @@
  
   
     
-    <li data-nav-id="/7-sns/" title="SNS" class="dd-item 
+    <li data-nav-id="/workshop/7-sns/" title="SNS" class="dd-item 
         
         
         
         ">
-      <a href="/7-sns/">
+      <a href="/workshop/7-sns/">
           <b>7. </b>SNS
           
             <i class="fas fa-check read-icon"></i>
@@ -489,12 +489,12 @@
  
   
     
-    <li data-nav-id="/7-sns/7.1-createsns/" title="Create SNS Topic" class="dd-item 
+    <li data-nav-id="/workshop/7-sns/7.1-createsns/" title="Create SNS Topic" class="dd-item 
         
         
         
         ">
-      <a href="/7-sns/7.1-createsns/">
+      <a href="/workshop/7-sns/7.1-createsns/">
            <b> 7.1 </b> Create SNS Topic
           
             <i class="fas fa-check read-icon"></i>
@@ -517,12 +517,12 @@
  
   
     
-    <li data-nav-id="/7-sns/7.2-combine/" title="Combine with Lambda" class="dd-item 
+    <li data-nav-id="/workshop/7-sns/7.2-combine/" title="Combine with Lambda" class="dd-item 
         
         
         
         ">
-      <a href="/7-sns/7.2-combine/">
+      <a href="/workshop/7-sns/7.2-combine/">
            <b> 7.2 </b> Combine with Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -552,12 +552,12 @@
  
   
     
-    <li data-nav-id="/8-test/" title="Test Results" class="dd-item 
+    <li data-nav-id="/workshop/8-test/" title="Test Results" class="dd-item 
         
         
         
         ">
-      <a href="/8-test/">
+      <a href="/workshop/8-test/">
           <b>8. </b>Test Results
           
             <i class="fas fa-check read-icon"></i>
@@ -578,13 +578,13 @@
  
   
     
-    <li data-nav-id="/9-clean/" title="Test Results" class="dd-item 
+    <li data-nav-id="/workshop/9-clean/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/9-clean/">
-          <b>8. </b>Test Results
+      <a href="/workshop/9-clean/">
+          <b>9. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -631,7 +631,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/2-prerequiste/2.4-createec2/" selected>English</option>
+                      <option id="en" value="http://localhost:1313/workshop/2-prerequiste/2.4-createec2/" selected>English</option>
                     
                   
               
@@ -645,7 +645,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/2-prerequiste/2.4-createec2/">Tiếng Việt</option>
+                      <option id="vi" value="http://localhost:1313/workshop/vi/2-prerequiste/2.4-createec2/">Tiếng Việt</option>
                     
                   
               
@@ -735,7 +735,7 @@
             
           
           
-            <a href='/'>Automated Security Scanning System using GuardDuty and Lambda function</a> > <a href='/2-prerequiste/'>Preparation</a> > Create EC2 Instance
+            <a href='/workshop/'>Automated Security Scanning System using GuardDuty and Lambda function</a> > <a href='/workshop/2-prerequiste/'>Preparation</a> > Create EC2 Instance
           
         
           
@@ -788,7 +788,8 @@
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>Launch Instances</strong></li>
 </ul>
-<p><img src="/images/2.prerequisite/Chuanbi-%2814%29.png" alt="EC2"></p>
+
+<img src="http://localhost:1313/workshop//images/2.prerequisite/Chuanbi-%2814%29.png" alt="EC2" />
 <ol start="2">
 <li>Configure <strong>EC2</strong></li>
 </ol>
@@ -798,7 +799,8 @@
 <li>Select <strong>Amazon Linux</strong> for <strong>AMI</strong></li>
 <li>Select <strong>t2.micro</strong> for <strong>Instance type</strong></li>
 </ul>
-<p><img src="/images/2.prerequisite/Chuanbi-%2815%29.png" alt="EC2"></p>
+
+<img src="http://localhost:1313/workshop//images/2.prerequisite/Chuanbi-%2815%29.png" alt="EC2" />
 <ol start="3">
 <li>Configure <strong>Network</strong></li>
 </ol>
@@ -809,7 +811,8 @@
 <li>Select <strong>Security-Group</strong></li>
 <li>Click <strong>Launch instance</strong></li>
 </ul>
-<p><img src="/images/2.prerequisite/Chuanbi-%2816%29.png" alt="EC2"></p>
+
+<img src="http://localhost:1313/workshop//images/2.prerequisite/Chuanbi-%2816%29.png" alt="EC2" />
 <ol start="4">
 <li>After creating 2 EC2 Instances, rename them to:</li>
 </ol>
@@ -817,7 +820,8 @@
 <li><code>Compromised_EC2</code> (EC2 suspected of being infected)</li>
 <li><code>Malicious_EC2</code> (EC2 that is infected and included in the Threat List)</li>
 </ul>
-<p><img src="/images/2.prerequisite/Chuanbi-%2817%29.png" alt="EC2"></p>
+
+<img src="http://localhost:1313/workshop//images/2.prerequisite/Chuanbi-%2817%29.png" alt="EC2" />
 
 
 
@@ -1167,10 +1171,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-prerequiste/2.3-createisolatesg/" title="Create Isolate Security Group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/2-prerequiste/2.3-createisolatesg/" title="Create Isolate Security Group"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.5-createiamrole/" title="Create Role for Lambda" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop/2-prerequiste/2.5-createiamrole/" title="Create Role for Lambda" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1180,19 +1184,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753026332"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753026332"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753026332"></script>
-    <script src="/js/jquery.sticky.js?1753026332"></script>
-    <script src="/js/featherlight.min.js?1753026332"></script>
-    <script src="/js/highlight.pack.js?1753026332"></script>
+    <script src="/workshop/js/clipboard.min.js?1753325853"></script>
+    <script src="/workshop/js/perfect-scrollbar.min.js?1753325853"></script>
+    <script src="/workshop/js/perfect-scrollbar.jquery.min.js?1753325853"></script>
+    <script src="/workshop/js/jquery.sticky.js?1753325853"></script>
+    <script src="/workshop/js/featherlight.min.js?1753325853"></script>
+    <script src="/workshop/js/highlight.pack.js?1753325853"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753026332"></script>
-    <script src="/js/learn.js?1753026332"></script>
-    <script src="/js/hugo-learn.js?1753026332"></script>
+    <script src="/workshop/js/modernizr.custom-3.6.0.js?1753325853"></script>
+    <script src="/workshop/js/learn.js?1753325853"></script>
+    <script src="/workshop/js/hugo-learn.js?1753325853"></script>
 
-    <link href="/mermaid/mermaid.css?1753026332" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753026332"></script>
+    <link href="/workshop/mermaid/mermaid.css?1753325853" rel="stylesheet" />
+    <script src="/workshop/mermaid/mermaid.js?1753325853"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

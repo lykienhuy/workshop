@@ -1,146 +1,146 @@
 [
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createvpc/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/2.1-createvpc/",
 	"title": "Chuẩn bị VPC",
 	"tags": [],
 	"description": "",
 	"content": "Tạo VPC Truy cập VPC. Chọn Your VPC Chọn Create VPC Tùy chọn trong VPC Wizard Chọn VPC and more Điền tên VPC Số lượng AZ: Số lượng private/public subnet: 1 Chọn Create VPC "
 },
 {
-	"uri": "//localhost:1313/vi/1-introduce/",
+	"uri": "http://localhost:1313/workshop/vi/1-introduce/",
 	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
-	"content": "\nLuồng hoạt động 1: Traffic độc hại từ Compromised EC2 đến Malicious EC2\nEC2 bị nghi ngờ xâm nhập (Compromised EC2) thực hiện kết nối ra ngoài tới một EC2 có EIP nằm trong danh sách đe dọa (Malicious EC2). Đây là hành vi tiềm ẩn tấn công (ví dụ như scan cổng, brute force, malware, \u0026hellip;)\n2: GuardDuty kiểm tra Threat List\nGuardDuty sẽ sử dụng Threat IP List, trong đó có danh sách IP từ S3 Bucket (Threat List) do người điều hành cung cấp. Khi phát hiện EIP nằm trong danh sách này, GuardDuty sinh ra một Finding (sự kiện phát hiện nguy cơ bảo mật )\n3: Finding được gửi đến Amazon EventBridge\nSự kiện phát hiện (Finding) từ GuardDuty sẽ được tự động gửi vào EventBridge Rule nếu khớp điều kiện (ví dụ: type = Recon:EC2/PortScan,\u0026ldquo;severity\u0026rdquo;: [4, 5, 6, 7, 8],\u0026hellip;)\n4: EventBridge kích hoạt Lambda Function\nLambda sẽ được EventBridge gọi để thực hiện hành động phản ứng tự động. Logic bên trong Lambda gồm:\nXác định InstanceId của EC2 bị nghi nhiễm Tiến hành ngừng EC2 Instance đó để tránh bị khai thác dữ liệu Thay đổi Security Group của Instance đó thành Isolated Security Group (SG giới hạn hoặc cấm toàn bộ lưu lượng) 5: Lambda tiến hành cách ly Compromised EC2\nDo đã được gán Isolated Security Group, EC2 bị nghi nhiễm sẽ không thể giao tiếp ra ngoài nữa. Điều này giúp ngăn chặn lây lan hoặc tiếp tục khai thác.\n6: Lambda gửi cảnh báo qua SNS\nSau khi cách ly xong, Lambda gửi thông tin cảnh báo đến Amazon SNS SNS sẽ gửi Email đến người điều hành bao gồm log và thông báo đã cách ly thành công EC2 sang một Security Group khác\n"
+	"content": " Luồng hoạt động 1: Traffic độc hại từ Compromised EC2 đến Malicious EC2\nEC2 bị nghi ngờ xâm nhập (Compromised EC2) thực hiện kết nối ra ngoài tới một EC2 có EIP nằm trong danh sách đe dọa (Malicious EC2). Đây là hành vi tiềm ẩn tấn công (ví dụ như scan cổng, brute force, malware, \u0026hellip;)\n2: GuardDuty kiểm tra Threat List\nGuardDuty sẽ sử dụng Threat IP List, trong đó có danh sách IP từ S3 Bucket (Threat List) do người điều hành cung cấp. Khi phát hiện EIP nằm trong danh sách này, GuardDuty sinh ra một Finding (sự kiện phát hiện nguy cơ bảo mật )\n3: Finding được gửi đến Amazon EventBridge\nSự kiện phát hiện (Finding) từ GuardDuty sẽ được tự động gửi vào EventBridge Rule nếu khớp điều kiện (ví dụ: type = Recon:EC2/PortScan,\u0026ldquo;severity\u0026rdquo;: [4, 5, 6, 7, 8],\u0026hellip;)\n4: EventBridge kích hoạt Lambda Function\nLambda sẽ được EventBridge gọi để thực hiện hành động phản ứng tự động. Logic bên trong Lambda gồm:\nXác định InstanceId của EC2 bị nghi nhiễm Tiến hành ngừng EC2 Instance đó để tránh bị khai thác dữ liệu Thay đổi Security Group của Instance đó thành Isolated Security Group (SG giới hạn hoặc cấm toàn bộ lưu lượng) 5: Lambda tiến hành cách ly Compromised EC2\nDo đã được gán Isolated Security Group, EC2 bị nghi nhiễm sẽ không thể giao tiếp ra ngoài nữa. Điều này giúp ngăn chặn lây lan hoặc tiếp tục khai thác.\n6: Lambda gửi cảnh báo qua SNS\nSau khi cách ly xong, Lambda gửi thông tin cảnh báo đến Amazon SNS SNS sẽ gửi Email đến người điều hành bao gồm log và thông báo đã cách ly thành công EC2 sang một Security Group khác\n"
 },
 {
-	"uri": "//localhost:1313/vi/",
+	"uri": "http://localhost:1313/workshop/vi/",
 	"title": "Hệ thống Quét Bảo mật Tự động sử dụng GuardDuty và Lambda function",
 	"tags": [],
 	"description": "",
 	"content": "Hệ thống Quét Bảo mật Tự động sử dụng GuardDuty và Lambda function Tổng quan Trong bài thực hành này, bạn sẽ học các khái niệm cơ bản và thực hành với Amazon GuardDuty và Lambda function\nAmazon GuardDuty Amazon GuardDuty là dịch vụ phát hiện mối đe dọa được quản lý hoàn toàn bởi AWS. Nó giúp bạn giám sát và bảo vệ các tài nguyên AWS như tài khoản IAM, EC2, S3, Lambda\u0026hellip; khỏi các hành vi độc hại hoặc trái phép.\nLambda Function Lambda Function là dịch vụ điện toán không máy chủ giúp bạn chạy mã mà không cần quản lý máy chủ.\nAmazon CloudWatch Amazon CloudWatch là dịch vụ giám sát và quan sát trong AWS, cho phép bạn thu thập, theo dõi và phân tích nhật ký, số liệu và sự kiện từ các dịch vụ và ứng dụng AWS. Nó giúp kích hoạt Lambda, EC2 Auto Scaling hoặc gửi thông báo qua SNS.\nAmazon EventBridge Amazon EventBridge là dịch vụ bus sự kiện được quản lý hoàn toàn giúp kết nối các dịch vụ AWS, ứng dụng SaaS hoặc ứng dụng tùy chỉnh thông qua các sự kiện thời gian thực.\nAmazon S3 Bucket Amazon S3 là dịch vụ lưu trữ đối tượng linh hoạt, bền vững và có khả năng mở rộng vô hạn của AWS. S3 Bucket là một container chứa các đối tượng như tệp, hình ảnh, video, dữ liệu sao lưu, nhật ký hệ thống.\nAmazon SNS Amazon SNS là dịch vụ nhắn tin pub/sub (xuất bản/đăng ký) được quản lý hoàn toàn bởi AWS. Nó cho phép bạn gửi thông báo tự động từ hệ thống, ứng dụng hoặc dịch vụ AWS đến nhiều người nhận (người đăng ký).\nNội dung Giới thiệu Chuẩn bị Tạo S3 Bucket Kích hoạt GuardDuty Lambda function EventBridge SNS Kiểm tra Kết quả Dọn dẹp tài nguyên "
 },
 {
-	"uri": "//localhost:1313/vi/3-s3/3.1-creates3/",
+	"uri": "http://localhost:1313/workshop/vi/3-s3/3.1-creates3/",
 	"title": "Tạo S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Tạo S3 Bucket Truy cập giao diện S3 Chọn General purpose buckets Chọn Create bucket Ở mục Bucket type Chọn General purpose Bucket name thì đặt tên bạn tùy thích Vì Bucket name là duy nhất trên mức độ toàn cầu, nếu sử dụng tên giống như trên sẽ xuất hiện thông báo: “Bucket with the same name already exists”. Do đó, cần thêm chữ cái hay số phía sau để Bucket name của bạn phù hợp với policy.\nChọn Create bucket "
 },
 {
-	"uri": "//localhost:1313/vi/7-sns/7.1-createsns/",
+	"uri": "http://localhost:1313/workshop/vi/7-sns/7.1-createsns/",
 	"title": "Tạo SNS Topic",
 	"tags": [],
 	"description": "",
 	"content": "Tạo SNS Topic Truy cập giao diện Amazon SNS Chọn Topics Chọn Create topic Trong giao diện Create topic Type chọn là Standard Name đặt là Lambda_SNS Display name đặt là SNS Topic Bấm Create topic Sau khi tạo xong thì bấm Create subscription Tạo Subscription Topic ARN thì ta sẽ chọn ARN của Lambda_SNS Protocol thì ta chọn là email (Gửi qua email) Endpoint ta sẽ nhập email nhận thông báo vào (Có thể là email của mình) Chọn Create subscription Check Email để confirm subscription "
 },
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/",
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
 	"content": "\rTrong bước chuẩn bị chúng ta sẽ tiến hành tạo VPC và Subnet cho EC2 hoạt động và tạo 2 SG để thuận tiện cho việc cách ly\nĐể tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :\nGiới thiệu về Amazon EC2 Làm việc với Amazon VPC Nội dung Chuẩn bị VPC Tạo Security Group Tạo Isolate Security Group Tạo EC2 Tạo Role cho Lambda "
 },
 {
-	"uri": "//localhost:1313/vi/7-sns/7.2-combine/",
+	"uri": "http://localhost:1313/workshop/vi/7-sns/7.2-combine/",
 	"title": "Kết hợp với Lambda",
 	"tags": [],
 	"description": "",
 	"content": "Kết hợp các thành phần với Lambda Truy cập giao diện Lambda Vào lại môi trường Lambda lúc nãy đã tạo Chọn Add trigger Trong giao diện Add trigger Trigger configuration chọn là EventBridge Rule chọn là Existing rule Bấm Add để tiến hành thêm trigger Tiếp theo chọn Add destination Trong giao diện Destination configuration Condition thì chọn là On success Destination type thì ta chọn là SNS topic Chọn Save Kiểm tra lại môi trường Lambda "
 },
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createsg/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/2.2-createsg/",
 	"title": "Tạo Security Group",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Security Group Truy cập VPC Chọn Security Group Chọn Create Security Group Tiến hành cấu hình Security Group name, nhập Security-Group Description, nhập Normal Security Group (Đây sẽ là SG để các EC2 hoạt động bình thường) VPC sẽ chọn VPC đã tạo Bấm vào Add rule 3. Cấu hình Inbound Rules\nSSH cổng 22 dùng để kết nối với máy local và source chọn My IP\nHTTP cổng 80 và source là Anywhere IPv4\nHTTPS cổng 443 và source là Anywhere IPv4\n4. Chọn Create Security Group\n"
 },
 {
-	"uri": "//localhost:1313/vi/3-s3/3.2-uploadthreatlist/",
+	"uri": "http://localhost:1313/workshop/vi/3-s3/3.2-uploadthreatlist/",
 	"title": "Upload Threat list lên S3",
 	"tags": [],
 	"description": "",
 	"content": "Tải Threat list lên S3 Ta sẽ giả sử Malicious_EC2 là một EC2 độc hại, không được cho bất cứ kết nối nào đến với EC2 này. Vì nếu kết nối sẽ có nguy cơ bị lây nhiễm rất cao.\nTa sẽ đưa đại chỉ IP của EC2 này vào Threat list bằng cách: Chọn Malicious_EC2 Copy Public IPv4 address của EC2 này Tạo 1 file txt Đặt tên là ThreatList.txt Paste IP của EC2 độc hại vào file txt đó Tiến hành Upload file txt đó lên S3 Sau khi Upload thành công thì tiến hành Copy Object URL "
 },
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/2.3-createisolatesg/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/2.3-createisolatesg/",
 	"title": "Tạo Isolate Security Group",
 	"tags": [],
 	"description": "",
-	"content": "Tạo Security Group Tiến hành cấu hình Security Group name, nhập Isolated Security-Group Description, nhập Isolated Security Group (Đây sẽ là SG dùng để cách ly các EC2 bị nghi nhiễm) VPC sẽ chọn VPC đã tạo 2. Cấu hình Inbound Rules\nSSH cổng 22 dùng để kết nối với máy local và source chọn My IP (Dùng để điều tra các EC2 bị nghi nhiễm) Chọn Create Security Group "
+	"content": "Tạo Security Group Tiến hành cấu hình Security Group name, nhập Isolated Security-Group Description, nhập Isolated Security Group (Đây sẽ là SG dùng để cách ly các EC2 bị nghi nhiễm) VPC sẽ chọn VPC đã tạo Cấu hình Inbound Rules SSH cổng 22 dùng để kết nối với máy local và source chọn My IP (Dùng để điều tra các EC2 bị nghi nhiễm) Chọn Create Security Group "
 },
 {
-	"uri": "//localhost:1313/vi/3-s3/",
+	"uri": "http://localhost:1313/workshop/vi/3-s3/",
 	"title": "Tạo S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan Trong bước này, chúng ta sẽ tạo một S3 Bucket dùng để lưu trữ các IP của EC2 độc hại (Threat list). GuardDuty sẽ dựa theo file mà ta đã upload lên để lọc.\nNội dung Tạo S3 Bucket Tải Threat list lên S3 "
 },
 {
-	"uri": "//localhost:1313/vi/4-guardduty/",
+	"uri": "http://localhost:1313/workshop/vi/4-guardduty/",
 	"title": "Kích hoạt GuardDuty",
 	"tags": [],
 	"description": "",
 	"content": "Kích hoạt GuardDuty Sau khi ta Enabled GuardDuty thì ta sẽ có giao diện như sau\nTiến hành thêm Threat list vào GuardDuty Vào Settings Chọn Lists Chọn Add a threat IP list Tiến hành thêm danh sách lọc cho GuardDuty List name ta sẽ đặt tên là ThreatList Location ta sẽ paste đoạn Object URL mà ta đã copy ở S3 vào List format ta sẽ chọn là Plaintext Chọn Add list để tiến hành thêm danh sách Sau khi thêm danh sách Chọn Actions/Activate để kích hoạt danh sách đã thêm "
 },
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/2.4-createec2/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/2.4-createec2/",
 	"title": "Tạo EC2 Instance",
 	"tags": [],
 	"description": "",
 	"content": "Tạo EC2 Instance Truy cập EC2 Chọn Instances Chọn Launch Instances Cấu hình EC2 Name là EC2 Number of instances là 2 AMI chọn Amazon Linux Instance type chọn là t2.micro Cấu hình Network VPC chọn VPC đã tạo Subnet Chọn public-subnet Chọn Select existing security group Chọn Security-Group Bấm Launch instance Sau khi tạo xong 2 EC2 Instance thì ta tiến hành đổi tên thành: Compromised_EC2 (EC2 đang bị nghi nhiễm) Malicious_EC2 (EC2 bị nhiễm và có trong Threat List) "
 },
 {
-	"uri": "//localhost:1313/vi/5-lambdafunction/",
+	"uri": "http://localhost:1313/workshop/vi/5-lambdafunction/",
 	"title": "Lambda function",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Lambda function Chọn Create a function Trong giao diện Create function Chọn Author froom scratch Function name đặt là Auto_Isolate_Lambda Runtime chọn là Python 3.13 Chọn Create function Sau khi tạo môi trường xong Chọn Code Trong giao diện Code Source Thêm code này vào (Nhớ thay bằng ID Isolated-Security Group) Sau khi thêm xong thì tiến hành Deploy import boto3\rimport json\rfrom botocore.exceptions import ClientError\r# Initialize the EC2 client\rec2 = boto3.client(\u0026#39;ec2\u0026#39;)\rdef lambda_handler(event, context):\rtry:\r# Log the incoming event to see its structure\rprint(f\u0026#34;Received event: {json.dumps(event)}\u0026#34;)\r# Extract instance ID from the event details\rif \u0026#39;detail\u0026#39; in event and \u0026#39;resource\u0026#39; in event[\u0026#39;detail\u0026#39;] and \u0026#39;instanceDetails\u0026#39; in event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;]:\rinstance_id = event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;][\u0026#39;instanceDetails\u0026#39;][\u0026#39;instanceId\u0026#39;]\relse:\r# Return an error if the event structure is unexpected\rreturn {\r\u0026#39;statusCode\u0026#39;: 400,\r\u0026#39;body\u0026#39;: json.dumps(\u0026#34;Error: Event structure is not as expected.\u0026#34;)\r}\r# Isolate the instance by modifying its security group\rresponse_sg = ec2.modify_instance_attribute(\rInstanceId=instance_id,\rGroups=[\u0026#39;sg-01234abcd5678efgh\u0026#39;] # Thay bằng IsolatedSecurityGroup ID\r)\rprint(f\u0026#34;Instance {instance_id} isolated: {response_sg}\u0026#34;)\r# Stop the compromised instance\rresponse_stop = ec2.stop_instances(\rInstanceIds=[instance_id]\r)\rprint(f\u0026#34;Instance {instance_id} stopped: {response_stop}\u0026#34;)\rreturn {\r\u0026#39;statusCode\u0026#39;: 200,\r\u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Instance {instance_id} successfully isolated and stopped.\u0026#34;)\r}\rexcept ClientError as e:\rprint(f\u0026#34;Error occurred: {e}\u0026#34;)\rreturn {\r\u0026#39;statusCode\u0026#39;: 500,\r\u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Error: {str(e)}\u0026#34;)\r} Tiến hành cấp quyền cho Lambda Chọn Configuration Chọn Edit Ở mục Existing role Chọn Lambda_Role Chọn Save Tiến hành test Lambda Chọn Test Điền Event Name là test Bấm Save Nếu ra kết quả như hình dưới là thành công "
 },
 {
-	"uri": "//localhost:1313/vi/2-prerequiste/2.5-createiamrole/",
+	"uri": "http://localhost:1313/workshop/vi/2-prerequiste/2.5-createiamrole/",
 	"title": "Tạo Role cho Lambda",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Role cho Lambda Trong bước này chúng ta sẽ tiến hành tạo Role cho Lambda. Trong Role này sẽ được gán các policy như sau:\nAmazonEC2FullAccess AWSLambda_FullAccess AWSLambdaBasicExecutionRole CloudWatchEventsFullAccess Thực tế các thiết lập IAM luôn được áp dụng nguyên tắc Least Privilege (Chỉ được cấp quyền tối thiểu để thực hiện đúng chức năng của nó). Nhưng đây là bài lab nên ta sẽ áp dụng IAM FullAccess cho đơn giản.\nTruy cập giao diện IAM Chọn Roles Chọn Create role Trong giao diện Trusted entity type Chọn AWS service Chọn Lambda Chọn Next Trong giao diện Add permissions Tìm AmazonEC2FullAccess Chọn AmazonEC2FullAccess Tìm AWSLambda_FullAccess Chọn AWSLambda_FullAccess Tìm AWSLambdaBasicExecutionRole Chọn AWSLamdaBasicExecutionRole Tìm CloudWatchEventsFullAccess Chọn CloudWatchEventsFullAccess Trong phần Name, review, create Role name là Lambda_Role Description là Allows Lambda functions to call AWS services on yor behalf Chọn Create role "
 },
 {
-	"uri": "//localhost:1313/vi/6-eventbridge/",
+	"uri": "http://localhost:1313/workshop/vi/6-eventbridge/",
 	"title": "EventBridge",
 	"tags": [],
 	"description": "",
 	"content": "Cấu hình EventBridge Vào giao diện Amazon EventBridge Chọn EventBridge Rule Chọn Create rule Tiến hành cấu hình Name đặt là EventBridge-Lambda Description đặt là EventBridge from GuardDuty to Lambda Chọn Next Cấu hình Event Chọn Other Chọn Custom pattern (JSON editor) Tiến hành paste đoạn này JSON vào Event pattern {\r\u0026#34;source\u0026#34;: [\u0026#34;aws.guardduty\u0026#34;],\r\u0026#34;detail-type\u0026#34;: [\u0026#34;GuardDuty Finding\u0026#34;],\r\u0026#34;detail\u0026#34;: {\r\u0026#34;severity\u0026#34;: [4, 5, 6, 7, 8],\r\u0026#34;resource\u0026#34;: {\r\u0026#34;resourceType\u0026#34;: [\u0026#34;Instance\u0026#34;]\r}\r}\r} Ta sẽ bắt những Finding từ GuardDuty có mức độ severity là: 4, 5, 6, 7, 8. Và chỉ bắt các Finding từ các Instance\nChọn Target cho rule Target types chọn là AWS Service Select a target chọn là Lambda function Target location chọn là Target in this account Function chọn là Auto-Isolate-Lambda Tiếp tục chọn Next Chọn Create rule "
 },
 {
-	"uri": "//localhost:1313/vi/7-sns/",
+	"uri": "http://localhost:1313/workshop/vi/7-sns/",
 	"title": "SNS",
 	"tags": [],
 	"description": "",
 	"content": "Trong bước này, chúng ta sẽ tiến hành tạo SNS topic để thông báo cho ta biết mỗi lần Lambda tiến hành cách ly EC2 sang SG khác\nNội dung Tạo SNS Topic Kết hợp với Lambda "
 },
 {
-	"uri": "//localhost:1313/vi/8-test/",
+	"uri": "http://localhost:1313/workshop/vi/8-test/",
 	"title": "Kiểm tra kết quả",
 	"tags": [],
 	"description": "",
 	"content": "Kiểm tra kết quả Để biết được Lambda có hoạt động hay không thì ta sẽ tiến hành tạo một Finding đơn giản để xem phản ứng của Lambda như thế nào\nTa sẽ kiểm tra xem 2 EC2 ta đã tạo có phải nằm trong Security-Group không ( không được nằm trong Isolated-Security-Group) Tiến hành kết nối SSH với Compromised_EC2 Tiến hành Update sudo yum update -y Tiến hành ping vào IPv4 của Malicious_EC2 đang nằm trong Threat list của GuardDuty Nếu hiện thông báo này thì chứng tỏ Lambda đã hoạt động Tiến hành kiểm tra EC2\nXem EC2 đã tắt chưa Đã cách ly sang Isolated-Security-Group chưa Kiểm tra Finding từ GuardDuty Chọn Findings Ta sẽ thấy có dòng thông báo là \u0026ldquo;EC2 đang kết nối với một IP nằm trong Threat list\u0026rdquo;\u0026quot; Mức độ Severity là Medium Bấm vào Finding vừa phát hiện để xem chi tiết Kiểm tra Email để xem thông báo\n"
 },
 {
-	"uri": "//localhost:1313/vi/9-clean/",
+	"uri": "http://localhost:1313/workshop/vi/9-clean/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",
 	"content": "Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này\nXóa EC2 Instance Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Intances Chọn tất cả EC2 Instance liên quan tới bài lab Chọn Actions Chọn Terminate Xóa Security Group Mở Amazon VPC Console Chọn Security Groups từ thanh điều hướng bên trái Chọn Security Group liên quan đến bài lab Nhấp vào Actions, chọn Delete security group Nhấp vào Delete để xác nhận Xóa S3 Bucket Empty S3 Bucket Truy cập AWS S3 Trong danh sách Bucket name, chọn bucket liên quan bài lab Chọn Empty Trong trang Empty bucket, xác nhận và chọn Empty Xóa S3 Bucket Truy cập vào AWS S3 Chọn S3 bucket liên quan bài lab. Chọn Delete Điền tên S3 và chọn Delete bucket Xóa Threat list IP trong GuardDuty Truy cập vào GuardDuty Chọn Settings/Lists Chọn Threat list đã tạo trong bài lab này Chọn Actions/Delete Xóa Rule EventBridge Truy cập vào EventBridge Chọn Rule Chọn Rule đã tạo trong bài lab này Chọn Actions Nhập delete Xóa Lambda function Truy cập vào AWS Lambda Chọn các Function liên quan bài lab Chọn Delete Nhập confirm Xóa SNS Topic Truy cập vào Amazon SNS Chọn Topics Chọn Topics đã tạo trong bài lab Chọn Delete Nhập delete me "
 },
 {
-	"uri": "//localhost:1313/vi/categories/",
+	"uri": "http://localhost:1313/workshop/vi/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/vi/tags/",
+	"uri": "http://localhost:1313/workshop/vi/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

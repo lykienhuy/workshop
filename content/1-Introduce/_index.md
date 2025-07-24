@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 pre : " <b> 1. </b> "
 ---
-{{< img src="/images/guardduty2.drawio.png" alt="Introduce" >}} 
+{{< img src="/images/1.introduce/guardduty2.drawio.png" alt="Introduce" >}} 
 
 #### Workflow
 

@@ -1,146 +1,146 @@
 [
 {
-	"uri": "//localhost:1313/",
+	"uri": "http://localhost:1313/workshop/",
 	"title": "Automated Security Scanning System using GuardDuty and Lambda function",
 	"tags": [],
 	"description": "",
 	"content": "Automated Security Scanning System using GuardDuty and Lambda function Overview In this lab, you will learn the basic concepts and practice with Amazon GuardDuty and Lambda function\nAmazon GuardDuty Amazon GuardDuty is a fully managed threat detection service by AWS. It helps you monitor and protect AWS resources such as IAM accounts, EC2, S3, Lambda\u0026hellip; from malicious or unauthorized behaviors.\nLambda Function Lambda Function is a serverless computing service that helps you run code without managing servers.\nAmazon CloudWatch Amazon CloudWatch is a monitoring and observability service in AWS, allowing you to collect, track, and analyze logs, metrics, and events from AWS services and applications. It helps trigger Lambda, EC2 Auto Scaling, or send notifications via SNS.\nAmazon EventBridge Amazon EventBridge is a fully managed event bus service that helps connect AWS services, SaaS applications, or custom applications through real-time events.\nAmazon S3 Bucket Amazon S3 is AWS\u0026rsquo;s flexible, durable, and infinitely scalable object storage service. An S3 Bucket is a container for objects such as files, images, videos, backup data, system logs.\nAmazon SNS Amazon SNS is a fully managed pub/sub (publish/subscribe) messaging service by AWS. It allows you to send automated notifications from systems, applications, or AWS services to multiple recipients (subscribers).\nContent Introduction Preparation Create S3 Bucket Activate GuardDuty Lambda function EventBridge SNS Test Results Clean up resources "
 },
 {
-	"uri": "//localhost:1313/3-s3/3.1-creates3/",
+	"uri": "http://localhost:1313/workshop/3-s3/3.1-creates3/",
 	"title": "Create S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Create S3 Bucket Access the S3 interface Select General purpose buckets Select Create bucket In the Bucket type section Select General purpose Set Bucket name to a name of your choice Since Bucket names are globally unique, if you use a name that already exists, you will see the message: \u0026ldquo;Bucket with the same name already exists\u0026rdquo;. Therefore, you need to add letters or numbers at the end to make your Bucket name comply with the policy.\nSelect Create bucket "
 },
 {
-	"uri": "//localhost:1313/7-sns/7.1-createsns/",
+	"uri": "http://localhost:1313/workshop/7-sns/7.1-createsns/",
 	"title": "Create SNS Topic",
 	"tags": [],
 	"description": "",
 	"content": "Create SNS Topic Access the Amazon SNS interface Select Topics Select Create topic In the Create topic interface Select Standard for Type Set Name to Lambda_SNS Set Display name to SNS Topic Click Create topic After creation, click Create subscription Create a Subscription For Topic ARN, select the ARN of Lambda_SNS For Protocol, select email (Send via email) For Endpoint, enter the email address to receive notifications (Can be your own email) Select Create subscription Check your Email to confirm subscription "
 },
 {
-	"uri": "//localhost:1313/1-introduce/",
+	"uri": "http://localhost:1313/workshop/1-introduce/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "\nWorkflow 1: Malicious Traffic from Compromised EC2 to Malicious EC2\nThe suspected compromised EC2 instance establishes an outbound connection to another EC2 instance with an EIP listed in the threat list (Malicious EC2). This behavior indicates potential attacks (such as port scanning, brute force attempts, malware, etc.)\n2: GuardDuty checks the Threat List\nGuardDuty uses the Threat IP List, which includes IP addresses from an S3 Bucket (Threat List) provided by the administrator. When an EIP is detected in this list, GuardDuty generates a Finding (security threat detection event).\n3: Finding is sent to Amazon EventBridge\nThe detection event (Finding) from GuardDuty is automatically sent to an EventBridge Rule if it matches certain conditions (e.g., type = Recon:EC2/PortScan, \u0026ldquo;severity\u0026rdquo;: [4, 5, 6, 7, 8], etc.)\n4: EventBridge triggers Lambda Function\nLambda is invoked by EventBridge to perform automated response actions. The Lambda logic includes:\nIdentifying the InstanceId of the suspected compromised EC2 Stopping the EC2 Instance to prevent data exploitation Changing the Security Group of that Instance to an Isolated Security Group (SG that limits or blocks all traffic) 5: Lambda isolates the Compromised EC2\nAfter being assigned the Isolated Security Group, the suspected compromised EC2 can no longer communicate externally. This helps prevent further spread or exploitation.\n6: Lambda sends alerts via SNS\nAfter successful isolation, Lambda sends alert information to Amazon SNS. SNS sends an email to the administrator including logs and notification that the EC2 has been successfully isolated to a different Security Group.\n"
+	"content": " Workflow 1: Malicious Traffic from Compromised EC2 to Malicious EC2\nThe suspected compromised EC2 instance establishes an outbound connection to another EC2 instance with an EIP listed in the threat list (Malicious EC2). This behavior indicates potential attacks (such as port scanning, brute force attempts, malware, etc.)\n2: GuardDuty checks the Threat List\nGuardDuty uses the Threat IP List, which includes IP addresses from an S3 Bucket (Threat List) provided by the administrator. When an EIP is detected in this list, GuardDuty generates a Finding (security threat detection event).\n3: Finding is sent to Amazon EventBridge\nThe detection event (Finding) from GuardDuty is automatically sent to an EventBridge Rule if it matches certain conditions (e.g., type = Recon:EC2/PortScan, \u0026ldquo;severity\u0026rdquo;: [4, 5, 6, 7, 8], etc.)\n4: EventBridge triggers Lambda Function\nLambda is invoked by EventBridge to perform automated response actions. The Lambda logic includes:\nIdentifying the InstanceId of the suspected compromised EC2 Stopping the EC2 Instance to prevent data exploitation Changing the Security Group of that Instance to an Isolated Security Group (SG that limits or blocks all traffic) 5: Lambda isolates the Compromised EC2\nAfter being assigned the Isolated Security Group, the suspected compromised EC2 can no longer communicate externally. This helps prevent further spread or exploitation.\n6: Lambda sends alerts via SNS\nAfter successful isolation, Lambda sends alert information to Amazon SNS. SNS sends an email to the administrator including logs and notification that the EC2 has been successfully isolated to a different Security Group.\n"
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.1-createvpc/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/2.1-createvpc/",
 	"title": "Preparing VPC",
 	"tags": [],
 	"description": "",
 	"content": "Create VPC Access VPC. Select your VPC Click Create VPC Options in VPC Wizard Select VPC and more Enter VPC name Number of AZ: 1 Number of private/public subnets: 1 Click Create VPC "
 },
 {
-	"uri": "//localhost:1313/7-sns/7.2-combine/",
+	"uri": "http://localhost:1313/workshop/7-sns/7.2-combine/",
 	"title": "Combine with Lambda",
 	"tags": [],
 	"description": "",
 	"content": "Combine components with Lambda Access the Lambda interface Return to the Lambda environment we created earlier Select Add trigger In the Add trigger interface Select EventBridge for Trigger configuration Select Existing rule for Rule Click Add to add the trigger Next, select Add destination In the Destination configuration interface Select On success for Condition Select SNS topic for Destination type Click Save Verify the Lambda environment "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.2-createsg/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/2.2-createsg/",
 	"title": "Create Security Group",
 	"tags": [],
 	"description": "",
 	"content": "Create Security Group Access VPC Select Security Group Select Create Security Group Proceed with configuration For Security Group name, enter Security-Group For Description, enter Normal Security Group (This will be the SG for EC2 instances to operate normally) For VPC select the VPC you created Click on Add rule 3. Configure Inbound Rules\nSSH port 22 used to connect with local machine and select My IP for source\nHTTP port 80 and source is Anywhere IPv4\nHTTPS port 443 and source is Anywhere IPv4\n4. Select Create Security Group\n"
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/",
 	"title": "Preparation",
 	"tags": [],
 	"description": "",
 	"content": "\rIn the preparation step, we will create a VPC and Subnet for EC2 operation and create 2 Security Groups to facilitate isolation\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Prepare VPC Create Security Group Create Isolate Security Group Create EC2 Create Role for Lambda "
 },
 {
-	"uri": "//localhost:1313/3-s3/3.2-uploadthreatlist/",
+	"uri": "http://localhost:1313/workshop/3-s3/3.2-uploadthreatlist/",
 	"title": "Upload Threat list to S3",
 	"tags": [],
 	"description": "",
 	"content": "Upload Threat list to S3 We will assume that Malicious_EC2 is a malicious EC2 instance, and no connections should be allowed to this EC2. Because if connected, there is a high risk of infection.\nWe will add the IP address of this EC2 to the Threat list by: Selecting Malicious_EC2 Copying the Public IPv4 address of this EC2 Create a txt file Name it ThreatList.txt Paste the IP of the malicious EC2 into that txt file Upload that txt file to S3 After successful upload, copy the Object URL "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.3-createisolatesg/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/2.3-createisolatesg/",
 	"title": "Create Isolate Security Group",
 	"tags": [],
 	"description": "",
-	"content": "Create Security Group Proceed with configuration For Security Group name, enter Isolated Security-Group For Description, enter Isolated Security Group (This will be the SG used to isolate suspected infected EC2 instances) For VPC select the VPC you created 2. Configure Inbound Rules\nSSH port 22 used to connect with local machine and select My IP for source (Used to investigate suspected infected EC2 instances) Select Create Security Group "
+	"content": "Create Security Group Proceed with configuration For Security Group name, enter Isolated Security-Group For Description, enter Isolated Security Group (This will be the SG used to isolate suspected infected EC2 instances) For VPC select the VPC you created Configure Inbound Rules SSH port 22 used to connect with local machine and select My IP for source (Used to investigate suspected infected EC2 instances) Select Create Security Group "
 },
 {
-	"uri": "//localhost:1313/3-s3/",
+	"uri": "http://localhost:1313/workshop/3-s3/",
 	"title": "Create S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Overview In this step, we will create an S3 Bucket used to store IPs of malicious EC2 instances (Threat list). GuardDuty will filter based on the file we have uploaded.\nContent Create S3 Bucket Upload Threat list to S3 "
 },
 {
-	"uri": "//localhost:1313/4-guardduty/",
+	"uri": "http://localhost:1313/workshop/4-guardduty/",
 	"title": "Activate GuardDuty",
 	"tags": [],
 	"description": "",
 	"content": "Activate GuardDuty After we Enable GuardDuty, we will have the following interface\nAdd Threat list to GuardDuty Go to Settings Select Lists Select Add a threat IP list Add filter list for GuardDuty For List name we will name it ThreatList For Location we will paste the Object URL that we copied from S3 For List format we will select Plaintext Select Add list to add the list After adding the list Select Actions/Activate to activate the added list "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.4-createec2/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/2.4-createec2/",
 	"title": "Create EC2 Instance",
 	"tags": [],
 	"description": "",
 	"content": "Create EC2 Instance Access EC2 Select Instances Select Launch Instances Configure EC2 Set Name to EC2 Set Number of instances to 2 Select Amazon Linux for AMI Select t2.micro for Instance type Configure Network Select the created VPC for VPC Select public-subnet for Subnet Select Select existing security group Select Security-Group Click Launch instance After creating 2 EC2 Instances, rename them to: Compromised_EC2 (EC2 suspected of being infected) Malicious_EC2 (EC2 that is infected and included in the Threat List) "
 },
 {
-	"uri": "//localhost:1313/2-prerequiste/2.5-createiamrole/",
+	"uri": "http://localhost:1313/workshop/2-prerequiste/2.5-createiamrole/",
 	"title": "Create Role for Lambda",
 	"tags": [],
 	"description": "",
 	"content": "Create Role for Lambda In this step, we will create a Role for Lambda. This Role will be assigned the following policies:\nAmazonEC2FullAccess AWSLambda_FullAccess AWSLambdaBasicExecutionRole CloudWatchEventsFullAccess In practice, IAM settings always apply the Least Privilege principle (only granting minimum permissions to perform its specific function). But since this is a lab, we will use IAM FullAccess for simplicity.\nAccess the IAM interface Select Roles Select Create role In the Trusted entity type interface Select AWS service Select Lambda Select Next In the Add permissions interface Search for AmazonEC2FullAccess Select AmazonEC2FullAccess Search for AWSLambda_FullAccess Select AWSLambda_FullAccess Search for AWSLambdaBasicExecutionRole Select AWSLambdaBasicExecutionRole Search for CloudWatchEventsFullAccess Select CloudWatchEventsFullAccess In the Name, review, create section Set Role name to Lambda_Role Set Description to Allows Lambda functions to call AWS services on your behalf Select Create role "
 },
 {
-	"uri": "//localhost:1313/5-lambdafunction/",
+	"uri": "http://localhost:1313/workshop/5-lambdafunction/",
 	"title": "Lambda function",
 	"tags": [],
 	"description": "",
-	"content": "Create Lambda function Select Create a function In the Create function interface Select Author from scratch Set Function name to Auto_Isolate_Lambda Select Python 3.13 for Runtime Select Create function After creating the environment Select Code In the Code Source interface Add this code (Remember to replace with your Isolated-Security Group ID) After adding the code, proceed to Deploy import boto3 import json from botocore.exceptions import ClientError # Initialize the EC2 client ec2 = boto3.client(\u0026#39;ec2\u0026#39;) def lambda_handler(event, context): try: # Log the incoming event to see its structure print(f\u0026#34;Received event: {json.dumps(event)}\u0026#34;) # Extract instance ID from the event details if \u0026#39;detail\u0026#39; in event and \u0026#39;resource\u0026#39; in event[\u0026#39;detail\u0026#39;] and \u0026#39;instanceDetails\u0026#39; in event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;]: instance_id = event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;][\u0026#39;instanceDetails\u0026#39;][\u0026#39;instanceId\u0026#39;] else: # Return an error if the event structure is unexpected return { \u0026#39;statusCode\u0026#39;: 400, \u0026#39;body\u0026#39;: json.dumps(\u0026#34;Error: Event structure is not as expected.\u0026#34;) } # Isolate the instance by modifying its security group response_sg = ec2.modify_instance_attribute( InstanceId=instance_id, Groups=[\u0026#39;sg-01234abcd5678efgh\u0026#39;] # Replace with your IsolatedSecurityGroup ID ) print(f\u0026#34;Instance {instance_id} isolated: {response_sg}\u0026#34;) # Stop the compromised instance response_stop = ec2.stop_instances( InstanceIds=[instance_id] ) print(f\u0026#34;Instance {instance_id} stopped: {response_stop}\u0026#34;) return { \u0026#39;statusCode\u0026#39;: 200, \u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Instance {instance_id} successfully isolated and stopped.\u0026#34;) } except ClientError as e: print(f\u0026#34;Error occurred: {e}\u0026#34;) return { \u0026#39;statusCode\u0026#39;: 500, \u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Error: {str(e)}\u0026#34;) } Proceed to grant permissions for Lambda Select Configuration Select Edit In the Existing role section Select Lambda_Role Select Save Proceed to test Lambda Select Test Enter test for Event Name Click Save If the result appears as shown below, it\u0026rsquo;s successful "
+	"content": "Create Lambda function Select Create a function In the Create function interface Select Author from scratch Set Function name to Auto_Isolate_Lambda Select Python 3.13 for Runtime Select Create function After creating the environment Select Code In the Code Source interface Add this code (Remember to replace with your Isolated-Security Group ID) After adding the code, proceed to Deploy import boto3\rimport json\rfrom botocore.exceptions import ClientError\r# Initialize the EC2 client\rec2 = boto3.client(\u0026#39;ec2\u0026#39;)\rdef lambda_handler(event, context):\rtry:\r# Log the incoming event to see its structure\rprint(f\u0026#34;Received event: {json.dumps(event)}\u0026#34;)\r# Extract instance ID from the event details\rif \u0026#39;detail\u0026#39; in event and \u0026#39;resource\u0026#39; in event[\u0026#39;detail\u0026#39;] and \u0026#39;instanceDetails\u0026#39; in event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;]:\rinstance_id = event[\u0026#39;detail\u0026#39;][\u0026#39;resource\u0026#39;][\u0026#39;instanceDetails\u0026#39;][\u0026#39;instanceId\u0026#39;]\relse:\r# Return an error if the event structure is unexpected\rreturn {\r\u0026#39;statusCode\u0026#39;: 400,\r\u0026#39;body\u0026#39;: json.dumps(\u0026#34;Error: Event structure is not as expected.\u0026#34;)\r}\r# Isolate the instance by modifying its security group\rresponse_sg = ec2.modify_instance_attribute(\rInstanceId=instance_id,\rGroups=[\u0026#39;sg-01234abcd5678efgh\u0026#39;] # Replace with your IsolatedSecurityGroup ID\r)\rprint(f\u0026#34;Instance {instance_id} isolated: {response_sg}\u0026#34;)\r# Stop the compromised instance\rresponse_stop = ec2.stop_instances(\rInstanceIds=[instance_id]\r)\rprint(f\u0026#34;Instance {instance_id} stopped: {response_stop}\u0026#34;)\rreturn {\r\u0026#39;statusCode\u0026#39;: 200,\r\u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Instance {instance_id} successfully isolated and stopped.\u0026#34;)\r}\rexcept ClientError as e:\rprint(f\u0026#34;Error occurred: {e}\u0026#34;)\rreturn {\r\u0026#39;statusCode\u0026#39;: 500,\r\u0026#39;body\u0026#39;: json.dumps(f\u0026#34;Error: {str(e)}\u0026#34;)\r} Proceed to grant permissions for Lambda Select Configuration Select Edit In the Existing role section Select Lambda_Role Select Save Proceed to test Lambda Select Test Enter test for Event Name Click Save If the result appears as shown below, it\u0026rsquo;s successful "
 },
 {
-	"uri": "//localhost:1313/6-eventbridge/",
+	"uri": "http://localhost:1313/workshop/6-eventbridge/",
 	"title": "EventBridge",
 	"tags": [],
 	"description": "",
-	"content": "Configure EventBridge Go to the Amazon EventBridge interface Select EventBridge Rule Select Create rule Proceed with configuration Set Name to EventBridge-Lambda Set Description to EventBridge from GuardDuty to Lambda Select Next Configure Event Select Other Select Custom pattern (JSON editor) Paste this JSON into Event pattern { \u0026#34;source\u0026#34;: [\u0026#34;aws.guardduty\u0026#34;], \u0026#34;detail-type\u0026#34;: [\u0026#34;GuardDuty Finding\u0026#34;], \u0026#34;detail\u0026#34;: { \u0026#34;severity\u0026#34;: [4, 5, 6, 7, 8], \u0026#34;resource\u0026#34;: { \u0026#34;resourceType\u0026#34;: [\u0026#34;Instance\u0026#34;] } } } We will capture Findings from GuardDuty with severity levels: 4, 5, 6, 7, 8. And only capture Findings from Instances\nSelect Target for the rule Select AWS Service for Target types Select Lambda function for Select a target Select Target in this account for Target location Select Auto-Isolate-Lambda for Function Continue by selecting Next Select Create rule "
+	"content": "Configure EventBridge Go to the Amazon EventBridge interface Select EventBridge Rule Select Create rule Proceed with configuration Set Name to EventBridge-Lambda Set Description to EventBridge from GuardDuty to Lambda Select Next Configure Event Select Other Select Custom pattern (JSON editor) Paste this JSON into Event pattern {\r\u0026#34;source\u0026#34;: [\u0026#34;aws.guardduty\u0026#34;],\r\u0026#34;detail-type\u0026#34;: [\u0026#34;GuardDuty Finding\u0026#34;],\r\u0026#34;detail\u0026#34;: {\r\u0026#34;severity\u0026#34;: [4, 5, 6, 7, 8],\r\u0026#34;resource\u0026#34;: {\r\u0026#34;resourceType\u0026#34;: [\u0026#34;Instance\u0026#34;]\r}\r}\r} We will capture Findings from GuardDuty with severity levels: 4, 5, 6, 7, 8. And only capture Findings from Instances\nSelect Target for the rule Select AWS Service for Target types Select Lambda function for Select a target Select Target in this account for Target location Select Auto-Isolate-Lambda for Function Continue by selecting Next Select Create rule "
 },
 {
-	"uri": "//localhost:1313/7-sns/",
+	"uri": "http://localhost:1313/workshop/7-sns/",
 	"title": "SNS",
 	"tags": [],
 	"description": "",
 	"content": "In this step, we will create an SNS topic to notify us each time Lambda isolates an EC2 instance to a different Security Group.\nContent Create SNS Topic Combine with Lambda "
 },
 {
-	"uri": "//localhost:1313/8-test/",
+	"uri": "http://localhost:1313/workshop/8-test/",
 	"title": "Test Results",
 	"tags": [],
 	"description": "",
 	"content": "Test Results To determine if Lambda is working properly, we will create a simple Finding to see how Lambda responds.\nWe will check if the 2 EC2 instances we created are in the Security-Group (they should not be in the Isolated-Security-Group) Proceed to connect via SSH to Compromised_EC2 Perform an update sudo yum update -y Proceed to ping the IPv4 address of Malicious_EC2 which is in the Threat list of GuardDuty If this message appears, it indicates that Lambda is working Check the EC2 instance\nSee if the EC2 has been stopped Check if it has been isolated to the Isolated-Security-Group Check the Finding from GuardDuty Select Findings You will see a notification that \u0026ldquo;EC2 is connecting to an IP in the Threat list\u0026rdquo; The Severity level is Medium Click on the detected Finding to view details Check your Email for notifications\n"
 },
 {
-	"uri": "//localhost:1313/9-clean/",
+	"uri": "http://localhost:1313/workshop/9-clean/",
 	"title": "Clean up resources",
 	"tags": [],
 	"description": "",
 	"content": "We will proceed with the following steps to delete the resources we created in this lab\nDelete EC2 Instance Access the EC2 Management Console On the left navigation bar, select Instances Select all EC2 Instances related to the lab Choose Actions Select Terminate Delete Security Group Open the Amazon VPC Console Select Security Groups from the left navigation bar Select the Security Group related to the lab Click on Actions, select Delete security group Click Delete to confirm Delete S3 Bucket Empty S3 Bucket Access AWS S3 In the Bucket name list, select the bucket related to the lab Select Empty On the Empty bucket page, confirm and select Empty Delete S3 Bucket Access AWS S3 Select the S3 bucket related to the lab Select Delete Enter the S3 name and select Delete bucket Delete Threat list IP in GuardDuty Access GuardDuty Select Settings/Lists Select the Threat list created in this lab Select Actions/Delete Delete EventBridge Rule Access EventBridge Select Rule Select the Rule created in this lab Select Actions Enter delete Delete Lambda function Access AWS Lambda Select the Functions related to the lab Select Delete Enter confirm Delete SNS Topic Access Amazon SNS Select Topics Select the Topics created in the lab Select Delete Enter delete me "
 },
 {
-	"uri": "//localhost:1313/categories/",
+	"uri": "http://localhost:1313/workshop/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/tags/",
+	"uri": "http://localhost:1313/workshop/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
